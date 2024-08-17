@@ -3,9 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Login.css">
+    <script src="Login.js"></script>
     <title>Login e Cadastro</title>
 </head>
 <body>
-    
+    <div class="container">
+        <form action="arquivo.php" method="post">
+
+            <h1>Login</h1>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" required>
+            
+            <label for="senha">Senha:</label>
+            <input type="password" id="senha" required>
+
+            <button type="submit">ENTRAR</button>
+            <p>Não possui cadastro? <a href="">Cadastre-se</a>😊👍</p>
+        </form>
+
+        <img src="imgs-cadastro/pizza.png">
+    </div>
+
 </body>
 </html>
