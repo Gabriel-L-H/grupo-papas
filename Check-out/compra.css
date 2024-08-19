@@ -1,0 +1,19 @@
+body{
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, green, rgb(255, 255, 255), red);
+    
+}
+form{
+ width: 200px; 
+ height: auto; 
+ margin: 150px auto;
+ text-align: center;
+/*  */
+}
+input{
+    display: block;
+    margin: 12px auto;
+    width: 200px ;
+    height: 30px ;
+}
