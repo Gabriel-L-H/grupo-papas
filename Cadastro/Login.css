@@ -1,27 +1,74 @@
 body{
-    background-color: #E06100;
+    background: linear-gradient(to right, green 33%, white 33%, white 66%, red 66%);
     font-family: Arial, Helvetica, sans-serif;
 }
 .container{
     align-items: center;
     width: 60%;
-    height: 350px;
+    height: 400px;
     margin: auto;
-    background-color: #E01300;
+    background: linear-gradient(90deg, #860d02, #8d0f03);
+    box-shadow: 0px 0px 30px #700a01;
     margin-top: 10%;
+    border-radius: 2%;
+}
+form{
+    position: relative;
+    left: 10%;
+    top: 20%;
+    color: #fff;
+}
+form h1{
+    position: relative;
+    left: 10%;
+}
+form .block{
+    display: block;
+    margin-top: 4%;
+}
+form input{
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #fff;
+    outline: none;
+    width: 29%;
+    height: 10%;
 }
 form label{
-    display: block;
+    display: inline;
+    position: relative;
+    right: 30%;
+    bottom: 5px;
+}
+form img{
+    display: flex;
+    position: relative;
+    bottom: 30px;
+    left: 212px;
+    width: 24px;
+    height: 24px;
 }
 form button{
     display: block;
-    position: relative;
-    top: 15px;
-}
-img{
-    position: absolute;
-    bottom: 50%;
-    left: 45%;
     width: 30%;
-    height: 20%;
+    height: 30px;
+    position: relative;
+    background:transparent;
+    border-radius: 40px;
+    font-size: 15px;
+    font-weight: 600;
+    border: 1px solid #000000;
+    cursor: pointer;
+}
+img[src="imgs-cadastro/pizza.png"]{
+    position: absolute;
+    top: 30%;
+    left: 45%;
+    height: 34%;
+    width: 34%;
+}
+form input:focus ~ label,
+form input:valid ~ label{
+    
+    transform:translateY(-400px);
 }

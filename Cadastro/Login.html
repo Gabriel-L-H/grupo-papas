@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="Login.css">
-    <script src="Login.js"></script>
+    <script type="text/javascript" src="Login.js"></script>
     <title>Login e Cadastro</title>
 </head>
 <body>
@@ -13,11 +13,17 @@
 
             <h1>Login</h1>
 
-            <label for="email">Email:</label>
-            <input type="email" id="email" required>
+            <div class="block">
+                <input type="email" id="email" onfocus="teste()" required>
+                <label for="email">Email</label>
+                <img src="imgs-cadastro/email.png">
+            </div>
             
-            <label for="senha">Senha:</label>
-            <input type="password" id="senha" required>
+            <div class="block">
+                <input type="password" id="senha" onfocus="teste()" required>
+                <label for="senha" id="teste">Senha</label>
+                <img src="imgs-cadastro/lock.png">
+            </div>
 
             <button type="submit">ENTRAR</button>
             <p>Não possui cadastro? <a href="">Cadastre-se</a>😊👍</p>
