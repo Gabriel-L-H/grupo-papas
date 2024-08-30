@@ -1,11 +1,11 @@
 //animação do label de Email ao estar em focus//
-var id = null
+
 function animEmail(){
     document.getElementById("text-email").style.color = "blue";
 
     var p = 0
     clearInterval(id)
-    id = setInterval(frame, 3)
+    var id = setInterval(frame, 3)
     function frame(){
         if (p == 30){
             clearInterval(id)
@@ -18,16 +18,20 @@ function animEmail(){
     }
 };
 
+
+
+
+
 //animação do label de Email ao estar em blur//
 function animEmailCancel(){
     document.getElementById("text-email").style.color = "white";
 
     var p = 30
-    clearInterval(id)
-    id = setInterval(frame, 3)
+    clearInterval(id2)
+    var id2 = setInterval(frame, 3)
     function frame(){
         if (p == 3){
-            clearInterval(id)
+            clearInterval(id2)
         }
 
         else{
@@ -37,16 +41,19 @@ function animEmailCancel(){
     }
 };
 
+
+
+
 //animação do label de senha ao estar em focus//
 function animSenha(){
     document.getElementById("text-senha").style.color = "blue";
 
     var p = 0
-    clearInterval(id)
-    id = setInterval(frame, 3)
+    clearInterval(id3)
+    var id3 = setInterval(frame, 3)
     function frame(){
         if (p == 30){
-            clearInterval(id)
+            clearInterval(id3)
         }
 
         else{
@@ -56,16 +63,20 @@ function animSenha(){
     }
 };
 
+
+
+
+
 //animação do label de senha ao estar em blur//
 function animSenhaCancel(){
     document.getElementById("text-senha").style.color = "white";
 
     var p = 30
-    clearInterval(id)
-    id = setInterval(frame, 3)
+    clearInterval(id4)
+    var id4 = setInterval(frame, 3)
     function frame(){
         if (p == 3){
-            clearInterval(id)
+            clearInterval(id4)
         }
 
         else{
