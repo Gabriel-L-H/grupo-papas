@@ -96,3 +96,15 @@ elementEmail.addEventListener("blur", animEmailCancel);
 
 elementSenha.addEventListener("focus", animSenha);
 elementSenha.addEventListener("blur", animSenhaCancel);
+
+
+
+
+function animForm(){
+    var forms = document.querySelectorAll("div");
+    forms[0].style.width = "64%"
+    forms[0].style.height = 450 + "px"
+}
+
+var form1 = document.getElementById("login");
+form1.addEventListener("click", animForm)
