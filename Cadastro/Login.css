@@ -1,15 +1,15 @@
 body{
-    background: linear-gradient(to right, green 33%, white 33%, white 66%, red 66%);
+    background: linear-gradient(to right, rgb(1, 94, 1) 33%, white 33%, white 66%, rgb(196, 1, 1) 66%);
     font-family: Arial, Helvetica, sans-serif;
 }
 .container{
     align-items: center;
-    width: 60%;
+    width: 30%;
     height: 400px;
     margin: auto;
     background: linear-gradient(90deg, #860d02, #8d0f03);
     box-shadow: 0px 0px 30px #700a01;
-    margin-top: 10%;
+    margin-top: 9%;
     border-radius: 2%;
 }
 form{
@@ -60,12 +60,13 @@ form button{
     border: 1px solid #000000;
     cursor: pointer;
 }
-img[src="imgs-cadastro/pizza.png"]{
+img[src="imgs-cadastro/papas.png"]{
     position: absolute;
     top: 30%;
     left: 45%;
-    height: 34%;
-    width: 34%;
+    height: 44%;
+    width: 25%;
+    display: none;
 }
 form input:focus ~ label,
 form input:valid ~ label{

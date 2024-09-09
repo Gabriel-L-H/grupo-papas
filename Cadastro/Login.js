@@ -102,8 +102,38 @@ elementSenha.addEventListener("blur", animSenhaCancel);
 
 function animForm(){
     var forms = document.querySelectorAll("div");
-    forms[0].style.width = "64%"
-    forms[0].style.height = 450 + "px"
+
+    var b = 400
+    clearInterval(id5)
+    var id5 = setInterval(frame0, 1)
+
+    function frame0(){
+        if (b >= 820){
+            clearInterval(id5)
+        }
+
+        else{
+            b = b + 7
+            forms[0].style.width = b + "px"
+        }
+    }
+
+    var p = 400
+    clearInterval(id6)
+    var id6 = setInterval(frame, 1)
+
+    function frame(){
+        if (p == 500){
+            clearInterval(id6)
+        }
+
+        else{
+            p++
+            forms[0].style.height = p + "px"
+        }
+    }
+
+    document.getElementById("papas").style.display = "block"
 }
 
 var form1 = document.getElementById("login");
