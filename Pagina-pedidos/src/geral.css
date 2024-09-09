@@ -82,11 +82,11 @@ button {
     padding: 0px 5px 0px 5px;
 }
 
-.botaomais {
+.meubotao {
     background-color: rgb(0, 205, 0);
 }
 
-.botaomenos{
+.meubotaonao{
     background-color: #ff0000;
 }
 
