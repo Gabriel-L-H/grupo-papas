@@ -20,7 +20,7 @@ form{
 }
 form h1{
     position: relative;
-    left: 10%;
+    left: 30%;
 }
 form .block{
     display: block;
@@ -30,21 +30,23 @@ form input{
     background: transparent;
     border: none;
     border-bottom: 1px solid #fff;
+    position: relative;
+    left: 15%;
     outline: none;
-    width: 29%;
+    width: 45%;
     height: 10%;
 }
 form label{
     display: inline;
     position: relative;
-    right: 30%;
+    right: 31%;
     bottom: 5px;
 }
 form img{
     display: flex;
     position: relative;
     bottom: 30px;
-    left: 212px;
+    left: 265px;
     width: 24px;
     height: 24px;
 }
@@ -53,12 +55,17 @@ form button{
     width: 30%;
     height: 30px;
     position: relative;
+    left: 15%;
     background:transparent;
     border-radius: 40px;
     font-size: 15px;
     font-weight: 600;
     border: 1px solid #000000;
     cursor: pointer;
+}
+p{
+    position: relative;
+    left: 15%;
 }
 img[src="imgs-cadastro/papas.png"]{
     position: absolute;
@@ -68,8 +75,7 @@ img[src="imgs-cadastro/papas.png"]{
     width: 25%;
     display: none;
 }
-form input:focus ~ label,
-form input:valid ~ label{
-    
-    transform:translateY(-400px);
+#cadastro{
+    display: none;
 }
+ 
