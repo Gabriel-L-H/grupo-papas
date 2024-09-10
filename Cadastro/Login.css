@@ -46,7 +46,7 @@ form img{
     display: flex;
     position: relative;
     bottom: 30px;
-    left: 265px;
+    left: 225px;
     width: 24px;
     height: 24px;
 }
@@ -76,6 +76,36 @@ img[src="imgs-cadastro/papas.png"]{
     display: none;
 }
 #cadastro{
+    position: relative;
+    right: 13%;
     display: none;
+    float: right;
+    bottom: 200px;
+    flex-direction: column;
 }
- 
+#cadastro input{
+    width: 300px;
+    top: 11px;
+}
+#cadastro label{
+    bottom: 18px;
+}
+#cadastro input, #cadastro label{
+    margin-top: 1%;
+    left: 45%;
+}
+.linha2{
+    position: relative;
+    top: 30px;
+}
+#cadastro .linha2 label{
+    position: absolute;
+    left: 160px;
+    top: 10%;
+}
+#cadastro .linha2 label:last-child{
+    left: 280px;
+}
+#cadastro .linha2 input{
+    width: 32%;
+}

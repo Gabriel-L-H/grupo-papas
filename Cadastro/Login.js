@@ -127,7 +127,13 @@ function animForm(){
     }
 
     //Fazendo o papas aparecer em maios ou menos 1 segundo//
-    setTimeout(function(){document.getElementById("papas").style.display = "inline"}, 980)
+    setTimeout(function() {document.getElementById("papas").style.display = "inline"}, 980)
+
+    setTimeout(function() {document.getElementById("cadastro").style.display = "flex"}, 1300)
+
+    setTimeout(function () {var h1 = document.getElementsByTagName("h1") 
+                            h1[0].innerHTML = "Cadastro"
+    }, 980)
     
     //Fazendo o papas andar e desaparecer
     var c = 300
