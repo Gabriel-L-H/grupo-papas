@@ -77,19 +77,143 @@ function animSenhaCancel(){
         }
     }
 };
+
+//animação do label de Nome ao estar em focus//
+function animNome(){
+    document.getElementById("text-nome").style.color = "blue";
  
-//convertendo label email e senha para variaveis
+    var p = 0
+    clearInterval(id)
+    var id = setInterval(frame, 3)
+    function frame(){
+        if (p == 30){
+            clearInterval(id)
+        }
+ 
+        else{
+            p++
+            document.getElementById("text-nome").style.bottom = p + "px"
+        }
+    }
+};
+ 
+//animação do label de Nome ao estar em blur//
+function animNomeCancel(){
+    document.getElementById("text-nome").style.color = "white";
+ 
+    var p = 30
+    clearInterval(id2)
+    var id2 = setInterval(frame, 3)
+    function frame(){
+        if (p == 3){
+            clearInterval(id2)
+        }
+ 
+        else{
+            p--
+            document.getElementById("text-nome").style.bottom = p + "px"
+        }
+    }
+};
+
+//animação do label de CPF ao estar em focus//
+function animCPF(){
+    document.getElementById("text-cpf").style.color = "blue";
+ 
+    var p = 0
+    clearInterval(id)
+    var id = setInterval(frame, 3)
+    function frame(){
+        if (p == 30){
+            clearInterval(id)
+        }
+ 
+        else{
+            p++
+            document.getElementById("text-cpf").style.bottom = p + "px"
+        }
+    }
+};
+ 
+//animação do label de cpf ao estar em blur//
+function animCPFCancel(){
+    document.getElementById("text-cpf").style.color = "white";
+ 
+    var p = 30
+    clearInterval(id2)
+    var id2 = setInterval(frame, 3)
+    function frame(){
+        if (p == 3){
+            clearInterval(id2)
+        }
+ 
+        else{
+            p--
+            document.getElementById("text-cpf").style.bottom = p + "px"
+        }
+    }
+};
+
+//animação do label de Telefone ao estar em focus//
+function animTel(){
+    document.getElementById("text-tel").style.color = "blue";
+ 
+    var p = 0
+    clearInterval(id)
+    var id = setInterval(frame, 3)
+    function frame(){
+        if (p == 30){
+            clearInterval(id)
+        }
+ 
+        else{
+            p++
+            document.getElementById("text-tel").style.bottom = p + "px"
+        }
+    }
+};
+ 
+ 
+//animação do label de Telefone ao estar em blur//
+function animTelCancel(){
+    document.getElementById("text-tel").style.color = "white";
+    var p = 30
+    clearInterval(id2)
+    var id2 = setInterval(frame, 3)
+    function frame(){
+        if (p == 3){
+            clearInterval(id2)
+        }
+ 
+        else{
+            p--
+            document.getElementById("text-tel").style.bottom = p + "px"
+        }
+    }
+};
+ 
+//convertendo label email, senha, nome, cpf e telefone para variaveis
 var elementEmail = document.getElementById("email");
 var elementSenha = document.getElementById("senha");
+var elementNome = document.getElementById("text-nome");
+var elementCPF = document.getElementById("text-cpf");
+var elementTel = document.getElementById("text-tel");
  
-//chamando as funções de animação do email e senha ao estar em focus ou blur//
+//chamando as funções de animação do email, senha, nome, cpf e telefone ao estar em focus ou blur//
 elementEmail.addEventListener("focus", animEmail);
 elementEmail.addEventListener("blur", animEmailCancel);
  
 elementSenha.addEventListener("focus", animSenha);
 elementSenha.addEventListener("blur", animSenhaCancel);
  
- 
+elementNome.addEventListener("focus", animNome);
+elementNome.addEventListener("blur", animNomeCancel);
+
+elementCPF.addEventListener("focus", animCPF);
+elementCPF.addEventListener("blur", animCPFCancel);
+
+elementTel.addEventListener("focus", animTel);
+elementTel.addEventListener("blur", animTelCancel);
  
 //animação ao clicar em cadastrar-se//
 function animForm(){
@@ -126,8 +250,8 @@ function animForm(){
         }
     }
     
-    //Fazendo o papas aparecer em maios ou menos 1 segundo//
-    setTimeout(function() {document.getElementById("papas").style.display = "inline"}, 980)
+    //Fazendo o papas aparecer em dentro de 1 segundo//
+    setTimeout(function() {document.getElementById("papas").style.display = "inline"}, 100)
     
     //mudando display do id cadastro//
     setTimeout(function() {document.getElementById("cadastro").style.display = "flex"}, 1300)
@@ -152,9 +276,9 @@ function animForm(){
     }, 1200)
  
     //Fazendo o papas andar e desaparecer
-    var c = 300
+    var c = -1000
     clearInterval(id7)
-    var id7 = setInterval(frame1, 3)
+    var id7 = setInterval(frame1, 1)
     function frame1(){
         if (c == 1300){
             clearInterval(id7)
@@ -162,7 +286,7 @@ function animForm(){
         }
  
         else{
-            c++
+            c = c + 5
             document.getElementById("papas").style.left = c + "px"
         }
  
@@ -200,7 +324,7 @@ function animForm(){
 }
  
 function animFormLogin(){
-        //animando o retângulo vermelho//
+        //animando o retângulo vermelho para voltar ao tamanho anterior//
         var retanguloRed = document.querySelectorAll("div");
      
         var b = 820
@@ -217,7 +341,7 @@ function animFormLogin(){
                 retanguloRed[0].style.width = b + "px"
             }
         }
-     
+        
         var p = 430
         clearInterval(id10)
         var id10 = setInterval(frame, 1)
@@ -233,23 +357,28 @@ function animFormLogin(){
             }
         }
 
+        //Fazendo o p do cadastro desaparecer e adicionando o p do login//
         setTimeout(function () {var p = document.querySelectorAll("p")
             p[1].style.display = "none"
             p[0].style.display = "block"
-        }, 980)
+        }, 90)
 
+        //Mudando h1 de cadastro para Login//
         document.getElementById("cadastro").style = "none"
+        var h1 = document.querySelectorAll("h1")
+        h1[0].innerHTML = "Login"
 
+        //Ajustando a posição do form como um todo ao estado inicial//
         var id11 = setInterval(frame1, 1)
         a = -50
         function frame1(){
-            if (a == 60){
+            var forms = document.getElementById("login")
+            if (a == 44){
                 clearInterval(id11)
             }
      
             else{
                 a++
-                //erro abaixo//
                 forms.style.left = a + "px"
             }
            
@@ -260,11 +389,11 @@ function animFormLogin(){
             inputs[0].style.width = 190 + "px"
             inputs[1].style.width = 190 + "px"
      
-            labels[0].style.left = 110 + "px"
-            labels[1].style.left = 110 + "px"
+            labels[0].style.right = 133 + "px"
+            labels[1].style.right = 133 + "px"
      
-            imgs[0].style.rigth = 375 + "px"
-            imgs[1].style.right = 375 + "px"
+            imgs[0].style.left = 234 + "px"
+            imgs[1].style.left = 234 + "px"
         }
     }
 
