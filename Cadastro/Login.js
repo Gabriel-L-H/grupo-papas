@@ -144,7 +144,8 @@ function animForm(){
     
     //adicionando p depois de um tempo
     setTimeout(function () {var p = document.querySelectorAll("p")
-        p[0].insertAdjacentHTML("afterend", "<p id='p1'>Já possui login? <b id='entre'>Entre</b>😊</p>")
+        p[1].style.display = "block"
+        p[1].id = "p1"
         document.getElementById("p1").style.left = 56 + "%"
         document.getElementById("p1").style.maxWidth = 25 + "%"
         document.getElementById("p1").style.bottom = 45 + "px"
@@ -185,7 +186,7 @@ function animForm(){
         var inputs = document.querySelectorAll("input")
         var labels = document.querySelectorAll("label")
         var imgs = document.querySelectorAll("img")
- 
+        
         inputs[0].style.width = 230 + "px"
         inputs[1].style.width = 230 + "px"
  
@@ -199,16 +200,16 @@ function animForm(){
 }
  
 function animFormLogin(){
-        //animando o retângulo vermelho
-        var retanguloRed1 = document.querySelectorAll("div");
+        //animando o retângulo vermelho//
+        var retanguloRed = document.querySelectorAll("div");
      
         var b = 820
-        clearInterval(id5)
-        var id5 = setInterval(frame0, 1)
+        clearInterval(id9)
+        var id9 = setInterval(frame0, 1)
      
         function frame0(){
-            if (b <= 400){
-                clearInterval(id5)
+            if (b <= 422){
+                clearInterval(id9)
             }
      
             else{
@@ -218,12 +219,12 @@ function animFormLogin(){
         }
      
         var p = 430
-        clearInterval(id6)
-        var id6 = setInterval(frame, 1)
+        clearInterval(id10)
+        var id10 = setInterval(frame, 1)
      
         function frame(){
             if (p <= 400){
-                clearInterval(id6)
+                clearInterval(id10)
             }
      
             else{
@@ -231,10 +232,44 @@ function animFormLogin(){
                 retanguloRed[0].style.height = p + "px"
             }
         }
-    }
 
-var form0 = document.getElementById("entre");
-form0.addEventListener("click", animFormLogin)
+        setTimeout(function () {var p = document.querySelectorAll("p")
+            p[1].style.display = "none"
+            p[0].style.display = "block"
+        }, 980)
+
+        document.getElementById("cadastro").style = "none"
+
+        var id11 = setInterval(frame1, 1)
+        a = -50
+        function frame1(){
+            if (a == 60){
+                clearInterval(id11)
+            }
+     
+            else{
+                a++
+                //erro abaixo//
+                forms.style.left = a + "px"
+            }
+           
+            var inputs = document.querySelectorAll("input")
+            var labels = document.querySelectorAll("label")
+            var imgs = document.querySelectorAll("img")
+            
+            inputs[0].style.width = 190 + "px"
+            inputs[1].style.width = 190 + "px"
+     
+            labels[0].style.left = 110 + "px"
+            labels[1].style.left = 110 + "px"
+     
+            imgs[0].style.rigth = 375 + "px"
+            imgs[1].style.right = 375 + "px"
+        }
+    }
 
 var form1 = document.getElementById("cadastre-se");
 form1.addEventListener("click", animForm)
+
+var form0 = document.getElementById("entre");
+form0.addEventListener("click", animFormLogin)

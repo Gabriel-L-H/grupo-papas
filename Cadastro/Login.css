@@ -118,3 +118,6 @@ img[src="imgs-cadastro/papas.png"]{
 #cadastro .linha2 input{
     width: 32%;
 }
+p:last-child{
+    display: none;
+}
