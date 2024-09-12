@@ -1,6 +1,12 @@
 //animação do label de Email ao estar em focus//
  
 function animEmail(){
+    //verifica se input já está preenchido, para evitar reiniciar a animação//
+    if (document.getElementById("email").value != ""){
+        return
+    }
+    //caso não esteja a animação do label ocorre//
+    else{
     document.getElementById("text-email").style.color = "blue";
  
     var p = 0
@@ -16,20 +22,16 @@ function animEmail(){
             document.getElementById("text-email").style.bottom = p + "px"
         }
     }
+}
 };
  
  
 //animação do label de Email ao estar em blur//
 function animEmailCancel(){
-    //arrumar esse if e else//
-    if (document.getElementById("text-email").value != ""){
-        document.getElementById("text-email").style.color = "blue"
-        document.getElementById("text-email").style.bottom = 30 + "px"
-    }
-    else{
-    document.getElementById("text-email").style.color = "white";
- 
+    //verifica se já está ou não preenchido o input, para manter o label acima//
+    if (document.getElementById("email").value.trim() == ""){
     var p = 30
+    document.getElementById("text-email").style.color = "white"
     clearInterval(id2)
     var id2 = setInterval(frame, 3)
     function frame(){
@@ -43,11 +45,22 @@ function animEmailCancel(){
         }
     }
 }
+//se estiver preenchido, fica onde está//
+    else{
+        document.getElementById("text-email").style.color = "blue"
+        document.getElementById("text-email").style.bottom = 30 + "px"
+    }
 };
 
 
 //animação do label de senha ao estar em focus//
 function animSenha(){
+        //verifica se input já está preenchido, para evitar reiniciar a animação//
+        if (document.getElementById("senha").value != ""){
+            return
+        }
+        //caso não esteja a animação do label ocorre//
+        else{
     document.getElementById("text-senha").style.color = "blue";
  
     var p = 0
@@ -63,11 +76,14 @@ function animSenha(){
             document.getElementById("text-senha").style.bottom = p + "px"
         }
     }
+}
 };
  
  
 //animação do label de senha ao estar em blur//
 function animSenhaCancel(){
+    //verifica se já está ou não preenchido o input, para manter o label acima//
+    if (document.getElementById("senha").value.trim() == ""){
     document.getElementById("text-senha").style.color = "white";
  
     var p = 30
@@ -83,10 +99,23 @@ function animSenhaCancel(){
             document.getElementById("text-senha").style.bottom = p + "px"
         }
     }
+}
+
+//se estiver preenchido, fica onde está//
+    else{
+        document.getElementById("text-senha").style.color = "blue"
+        document.getElementById("text-senha").style.bottom = 30 + "px"
+    }
 };
 
 //animação do label de Nome ao estar em focus//
 function animNome(){
+    //verifica se input já está preenchido, para evitar reiniciar a animação//
+    if (document.getElementById("nome").value != ""){
+        return
+    }
+    //caso não esteja a animação do label ocorre//
+    else{
     document.getElementById("text-nome").style.color = "blue";
  
     var p = 15
@@ -102,10 +131,13 @@ function animNome(){
             document.getElementById("text-nome").style.bottom = p + "px"
         }
     }
+}
 };
  
 //animação do label de Nome ao estar em blur//
 function animNomeCancel(){
+    //verifica se já está ou não preenchido o input, para manter o label acima//
+    if (document.getElementById("nome").value.trim() == ""){
     document.getElementById("text-nome").style.color = "white";
  
     var p = 30
@@ -121,10 +153,24 @@ function animNomeCancel(){
             document.getElementById("text-nome").style.bottom = p + "px"
         }
     }
+}
+
+//se estiver preenchido, fica onde está//
+    else{
+        document.getElementById("text-nome").style.color = "blue"
+        document.getElementById("text-nome").style.bottom = 30 + "px"
+    }
 };
 
 //animação do label de CPF ao estar em focus//
 function animCPF(){
+    //verifica se input já está preenchido, para evitar reiniciar a animação//
+    if (document.getElementById("cpf").value != ""){
+        return
+    }
+
+    //caso não esteja a animação do label ocorre//
+    else{
     document.getElementById("text-cpf").style.color = "blue";
  
     var p = 3
@@ -140,10 +186,13 @@ function animCPF(){
             document.getElementById("text-cpf").style.bottom = p + "px"
         }
     }
+}
 };
  
 //animação do label de cpf ao estar em blur//
 function animCPFCancel(){
+    //verifica se já está ou não preenchido o input, para manter o label acima//
+    if (document.getElementById("cpf").value.trim() == ""){
     document.getElementById("text-cpf").style.color = "white";
  
     var p = 30
@@ -159,10 +208,24 @@ function animCPFCancel(){
             document.getElementById("text-cpf").style.bottom = p + "px"
         }
     }
+}
+
+    //se estiver preenchido, fica onde está//
+    else{
+        document.getElementById("text-cpf").style.color = "blue"
+        document.getElementById("text-cpf").style.bottom = 30 + "px"
+    }
 };
 
 //animação do label de Telefone ao estar em focus//
 function animTel(){
+        //verifica se input já está preenchido, para evitar reiniciar a animação//
+        if (document.getElementById("tel").value != ""){
+            return
+        }
+    
+        //caso não esteja a animação do label ocorre//
+        else{
     document.getElementById("text-tel").style.color = "blue";
  
     var p = 0
@@ -178,11 +241,14 @@ function animTel(){
             document.getElementById("text-tel").style.bottom = p + "px"
         }
     }
+}
 };
  
  
 //animação do label de Telefone ao estar em blur//
 function animTelCancel(){
+    //verifica se já está ou não preenchido o input, para manter o label acima//
+    if (document.getElementById("tel").value.trim() == ""){
     document.getElementById("text-tel").style.color = "white";
     var p = 30
     clearInterval(id2)
@@ -196,6 +262,13 @@ function animTelCancel(){
             p--
             document.getElementById("text-tel").style.bottom = p + "px"
         }
+    }
+}
+
+    //se estiver preenchido, fica onde está//
+    else{
+        document.getElementById("text-tel").style.color = "blue"
+        document.getElementById("text-tel").style.bottom = 30 + "px"
     }
 };
  
