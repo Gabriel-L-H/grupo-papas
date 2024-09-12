@@ -21,6 +21,12 @@ function animEmail(){
  
 //animação do label de Email ao estar em blur//
 function animEmailCancel(){
+    //arrumar esse if e else//
+    if (document.getElementById("text-email").value != ""){
+        document.getElementById("text-email").style.color = "blue"
+        document.getElementById("text-email").style.bottom = 30 + "px"
+    }
+    else{
     document.getElementById("text-email").style.color = "white";
  
     var p = 30
@@ -36,9 +42,10 @@ function animEmailCancel(){
             document.getElementById("text-email").style.bottom = p + "px"
         }
     }
+}
 };
- 
- 
+
+
 //animação do label de senha ao estar em focus//
 function animSenha(){
     document.getElementById("text-senha").style.color = "blue";
@@ -82,7 +89,7 @@ function animSenhaCancel(){
 function animNome(){
     document.getElementById("text-nome").style.color = "blue";
  
-    var p = 0
+    var p = 15
     clearInterval(id)
     var id = setInterval(frame, 3)
     function frame(){
@@ -105,7 +112,7 @@ function animNomeCancel(){
     clearInterval(id2)
     var id2 = setInterval(frame, 3)
     function frame(){
-        if (p == 3){
+        if (p == 15){
             clearInterval(id2)
         }
  
@@ -120,11 +127,11 @@ function animNomeCancel(){
 function animCPF(){
     document.getElementById("text-cpf").style.color = "blue";
  
-    var p = 0
+    var p = 3
     clearInterval(id)
     var id = setInterval(frame, 3)
     function frame(){
-        if (p == 30){
+        if (p == 60){
             clearInterval(id)
         }
  
@@ -195,9 +202,9 @@ function animTelCancel(){
 //convertendo label email, senha, nome, cpf e telefone para variaveis
 var elementEmail = document.getElementById("email");
 var elementSenha = document.getElementById("senha");
-var elementNome = document.getElementById("text-nome");
-var elementCPF = document.getElementById("text-cpf");
-var elementTel = document.getElementById("text-tel");
+var elementNome = document.getElementById("nome");
+var elementCPF = document.getElementById("cpf");
+var elementTel = document.getElementById("tel");
  
 //chamando as funções de animação do email, senha, nome, cpf e telefone ao estar em focus ou blur//
 elementEmail.addEventListener("focus", animEmail);
