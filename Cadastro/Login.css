@@ -80,7 +80,7 @@ img[src="imgs-cadastro/papas.png"]{
 }
 #cadastro{
     position: relative;
-    right: 20%;
+    right: 15%;
     display: none;
     float: right;
     bottom: 134px;
@@ -108,15 +108,16 @@ img[src="imgs-cadastro/papas.png"]{
     top: 30px;
 }
 #cadastro .linha2 label{
-    position: absolute;
+    position: relative;
     left: 160px;
     top: 10%;
 }
 #cadastro .linha2 label:last-child{
-    left: 280px;
+    left: 19%;
+    top: 2%;
 }
 #cadastro .linha2 input{
-    width: 32%;
+    width: 25%;
 }
 p:last-child{
     display: none;
