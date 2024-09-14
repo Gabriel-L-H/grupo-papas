@@ -96,7 +96,7 @@ img[src="imgs-cadastro/papas.png"]{
     width: 300px;
     top: 11px;
 }
-#cadastro label{
+#text-nome{
     bottom: 18px;
 }
 #cadastro input, #cadastro label{
@@ -107,14 +107,11 @@ img[src="imgs-cadastro/papas.png"]{
     position: relative;
     top: 30px;
 }
-#cadastro .linha2 label{
-    position: relative;
-    left: 160px;
-    top: 10%;
-}
+
 #cadastro .linha2 label:last-child{
+    position: relative;
     left: 19%;
-    top: 2%;
+    bottom: -8px;
 }
 #cadastro .linha2 input{
     width: 25%;

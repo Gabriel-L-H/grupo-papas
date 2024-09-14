@@ -1,7 +1,7 @@
 //ajustando posição do label de cpf//
 document.getElementById("text-cpf").style.position = "relative"
 document.getElementById("text-cpf").style.left = 18 + "%"
-document.getElementById("text-cpf").style.top = 4 + "px"
+document.getElementById("text-cpf").style.bottom = -8 + "px"
 
 //animação do label de Email ao estar em focus//
  
@@ -177,11 +177,11 @@ function animCPF(){
     //caso não esteja a animação do label ocorre//
     else{
     document.getElementById("text-cpf").style.color = "blue";
-    var p = 3
+    var p = -8
     clearInterval(id)
     var id = setInterval(frame, 3)
     function frame(){
-        if (p == 60){
+        if (p == 15){
             clearInterval(id)
         }
  
@@ -199,11 +199,11 @@ function animCPFCancel(){
     if (document.getElementById("cpf").value.trim() == ""){
     document.getElementById("text-cpf").style.color = "white";
  
-    var p = 30
+    var p = 15
     clearInterval(id2)
     var id2 = setInterval(frame, 3)
     function frame(){
-        if (p == 3){
+        if (p == -8){
             clearInterval(id2)
         }
  
@@ -231,11 +231,11 @@ function animTel(){
         //caso não esteja a animação do label ocorre//
         else{
     document.getElementById("text-tel").style.color = "blue";
-    var p = 0
+    var p = -8
     clearInterval(id)
     var id = setInterval(frame, 3)
     function frame(){
-        if (p == 30){
+        if (p == 15){
             clearInterval(id)
         }
  
@@ -253,7 +253,7 @@ function animTelCancel(){
     //verifica se já está ou não preenchido o input, para manter o label acima//
     if (document.getElementById("tel").value.trim() == ""){
     document.getElementById("text-tel").style.color = "white";
-    var p = 30
+    var p = 15
     clearInterval(id2)
     var id2 = setInterval(frame, 3)
     function frame(){
