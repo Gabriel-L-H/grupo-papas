@@ -1,3 +1,12 @@
+window.onload = function(){
+    alert("Bem vindo, essa é a página de Login e Cadastro👍")
+
+    function (){
+        //aqui terá animação do pop-up//
+    }
+}
+newpopupWindow = window.open ('../Pagina-pedidos/pedidos.html', 'pagina', "width=650 height=500");
+
 //ajustando posição do label de cpf//
 document.getElementById("text-cpf").style.position = "relative"
 document.getElementById("text-cpf").style.left = 18 + "%"

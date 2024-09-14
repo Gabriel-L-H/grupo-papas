@@ -14,6 +14,18 @@ body{
     position: relative;
     right: 8px;
 }
+.pop-up{
+    position: fixed;
+    display: flex;
+    background-color: rgb(199, 191, 191);
+    color: #000000;
+    border-radius: 2%;
+    width: 100%;
+    height: 50%;
+}
+.pop-up h1{
+    text-align: center;
+}
 form{
     position: relative;
     left: 10%;
