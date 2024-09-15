@@ -19,7 +19,7 @@ window.onload = function (){
 //o que ocorre após apertar um dos botões do pop-up, mas antes os transformo num """array"""//
 var buttons = document.querySelectorAll("button")
 
-//ao clicar em saiba mais, leva a página de pedidos e faz o pop-up sumir//
+//ao clicar em saiba mais, leva a página sobre e faz o pop-up sumir//
 buttons[1].addEventListener("click", function(){
     window.open ('../Sobre/Sobre.html', 'pagina', "width=650 height=500")
     document.getElementById("pop-up").style.display = "none"
