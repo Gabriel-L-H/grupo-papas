@@ -21,7 +21,7 @@ var buttons = document.querySelectorAll("button")
 
 //ao clicar em saiba mais, leva a página de pedidos e faz o pop-up sumir//
 buttons[1].addEventListener("click", function(){
-    window.open ('../Pagina-pedidos/pedidos.html', 'pagina', "width=650 height=500")
+    window.open ('../Sobre/Sobre.html', 'pagina', "width=650 height=500")
     document.getElementById("pop-up").style.display = "none"
 })
 
@@ -263,7 +263,7 @@ function animCPFCancel(){
     //se estiver preenchido, fica onde está//
     else{
         document.getElementById("text-cpf").style.color = "blue"
-        document.getElementById("text-cpf").style.bottom = 30 + "px"
+        document.getElementById("text-cpf").style.bottom = 15 + "px"
     }
 };
 
@@ -317,7 +317,7 @@ function animTelCancel(){
     //se estiver preenchido, fica onde está//
     else{
         document.getElementById("text-tel").style.color = "blue"
-        document.getElementById("text-tel").style.bottom = 30 + "px"
+        document.getElementById("text-tel").style.bottom = 15 + "px"
     }
 };
  
