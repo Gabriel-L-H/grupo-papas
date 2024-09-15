@@ -343,6 +343,26 @@ elementCPF.addEventListener("blur", animCPFCancel);
 
 elementTel.addEventListener("focus", animTel);
 elementTel.addEventListener("blur", animTelCancel);
+
+//chamando uma função para delimitar como o input de cpf deve ser preenchido//
+elementCPF.addEventListener("keypress", function(){
+    var tamanhoCampo = elementCPF.value.length
+
+    if(tamanhoCampo == 3 || tamanhoCampo == 7){
+        elementCPF.value += "."
+    }
+
+    else if(tamanhoCampo == 11){
+        elementCPF.value += "-"
+    }
+})
+
+elementCPF.addEventListener("keypress", function(e){
+    var n = e.key 
+    if (n != 0 && n != 1 && n != 2 && n != 3){
+        e.preventDefault()
+    } 
+})
  
 //animação ao clicar em cadastrar-se//
 function animForm(){
