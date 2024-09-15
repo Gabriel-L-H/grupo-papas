@@ -95,6 +95,14 @@ form button{
     border: 1px solid #000000;
     cursor: pointer;
 }
+form button:hover{
+    background: #077203; 
+    box-shadow: 0 0 3px rgba(30, 141, 10, 0.8);
+}
+button:hover{
+    transform: scale(1.1);
+    color: #fff;
+}
 p{
     position: relative;
     left: 15%;

@@ -344,7 +344,12 @@ elementCPF.addEventListener("blur", animCPFCancel);
 elementTel.addEventListener("focus", animTel);
 elementTel.addEventListener("blur", animTelCancel);
 
-//chamando uma função para delimitar como o input de cpf deve ser preenchido//
+//ao mudar o input email todos seus valores (digitos) serão convertidos para minúsculos automaticamente//
+elementEmail.addEventListener("change", function(){
+    elementEmail.value = elementEmail.value.toLowerCase()
+})
+
+//chamando uma função para delimitar como o input de cpf e telefone devem ser preenchidos//
 elementCPF.addEventListener("keypress", function(){
     var tamanhoCampo = elementCPF.value.length
 
@@ -357,10 +362,35 @@ elementCPF.addEventListener("keypress", function(){
     }
 })
 
+elementTel.addEventListener("keypress", function(){
+    var tamanhoCampo = elementTel.value.length
+
+    if(tamanhoCampo == 0){
+        elementTel.value += "("
+    }
+
+    if(tamanhoCampo == 3){
+        elementTel.value += ")"
+    }
+    if(tamanhoCampo == 9){
+        elementTel.value += "-"
+    }
+})
+
+//chamando uma função para limitar os digitos no cpf apenas para números e a letra x e no telefone, somente números,//
+//caso o contrário não aparece em ambos os casos//
+//Nota: o "e" e "f" das functions está chamando o keypress (tecla pressionada) e key se refere a tecla//
 elementCPF.addEventListener("keypress", function(e){
     var n = e.key 
-    if (n != 0 && n != 1 && n != 2 && n != 3){
+    if (n != 0 && n != 1 && n != 2 && n != 3 && n != 4 && n != 5 && n != 6 && n != 7 && n != 8 && n != 9 && n != "x"){
         e.preventDefault()
+    } 
+})
+
+elementTel.addEventListener("keypress", function(f){
+    var n = f.key 
+    if (n != 0 && n != 1 && n != 2 && n != 3 && n != 4 && n != 5 && n != 6 && n != 7 && n != 8 && n != 9){
+        f.preventDefault()
     } 
 })
  
