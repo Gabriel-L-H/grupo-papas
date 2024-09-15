@@ -1,11 +1,48 @@
-window.onload = function(){
+//alert ao carregar a página inteira e ocorre a aparição e animação de um pop-up logo após//
+window.onload = function (){
     alert("Bem vindo, essa é a página de Login e Cadastro👍")
+        var p = 0
+        clearInterval(id)
+        var id = setInterval(frame, 3)
+        function frame(){
+            if (p == 40){
+                clearInterval(id)
+            }
+            
+            else{
+                p++
+                document.getElementById("pop-up").style.top = p + "%"
+            }
+        }
+}
 
-    function (){
-        //aqui terá animação do pop-up//
+//o que ocorre após apertar um dos botões do pop-up, mas antes os transformo num """array"""//
+var buttons = document.querySelectorAll("button")
+
+//ao clicar em saiba mais, leva a página de pedidos e faz o pop-up sumir//
+buttons[1].addEventListener("click", function(){
+    window.open ('../Pagina-pedidos/pedidos.html', 'pagina', "width=650 height=500")
+    document.getElementById("pop-up").style.display = "none"
+})
+
+//ao clicar em talvez mais tarde, faz uma animação para o pop-up sumir indo para baixo//
+buttons[2].addEventListener("click", function(){
+    p = 40
+    clearInterval(id1)
+    var id1 = setInterval(frame1, 1)
+    function frame1 (){
+        if (p == 100){
+            clearInterval(id1)
+            document.getElementById("pop-up").style.display = "none"
+        }
+
+        else{
+            p++
+            document.getElementById("pop-up").style.top = p + "%"
+        }
     }
 }
-newpopupWindow = window.open ('../Pagina-pedidos/pedidos.html', 'pagina', "width=650 height=500");
+)
 
 //ajustando posição do label de cpf//
 document.getElementById("text-cpf").style.position = "relative"

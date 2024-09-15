@@ -14,17 +14,35 @@ body{
     position: relative;
     right: 8px;
 }
-.pop-up{
+#pop-up{
     position: fixed;
-    display: flex;
+    top: 100%;
     background-color: rgb(199, 191, 191);
     color: #000000;
     border-radius: 2%;
     width: 100%;
-    height: 50%;
+    height: 64%;
 }
-.pop-up h1{
+#pop-up h1, #pop-up h2, #pop-up button{
     text-align: center;
+}
+#pop-up button{
+    position: relative;
+    width: 30%;
+    height: 30px;
+    left: 19%;
+    background:transparent;
+    border-radius: 40px;
+    font-size: 15px;
+    font-weight: 600;
+    border: 1px solid #000000;
+    cursor: pointer;
+}
+#pop-up button:first-of-type{
+    background-color: rgb(2, 156, 2);
+}
+#pop-up button:last-child{
+    background-color: rgb(167, 3, 3);
 }
 form{
     position: relative;
@@ -119,7 +137,6 @@ img[src="imgs-cadastro/papas.png"]{
     position: relative;
     top: 30px;
 }
-
 #cadastro .linha2 label:last-child{
     position: relative;
     left: 19%;
@@ -130,4 +147,9 @@ img[src="imgs-cadastro/papas.png"]{
 }
 p:last-child{
     display: none;
+}
+#entre, #cadastre-se{
+    cursor: pointer;
+    text-decoration: underline;
+    color: rgb(31, 96, 236);
 }
