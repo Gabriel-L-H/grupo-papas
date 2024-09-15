@@ -1,159 +1,231 @@
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+a:hover {
+  opacity: 0.7;
+}
+
+#pop-up{
+  display: none;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 800px;
+  height: 500px;
+  background-color: #cf2734;
+  border: 1px solid black;
+  border-radius: 5px;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#pop-up.active{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#pop-up button{
+  background-color: #23232e;
+  color: #009344;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100px;
+  height: 50px;
+  font-size: larger;
+  font-family: quicksand;
+  margin-left: 44%;
+}
+
+#pop-up button:hover{
+  background-color: rgb(26, 24, 24);
+  transition: 0.5s;
+}
+#pop-up img{
+    width: 30%;
+    height: 60%;
+    padding-top: 2%;
+    margin-left: 40%;
+}
+#pop-up h2{
+  font-family: fredoka, sans-serif;
+  text-align: center;
+  color: #fff;
+  font-size: 250%;
+}
+.logo {
+  font-size: 24px;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  color: #cf2734;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
+  background: #23232e;
+  height: 8vh;
+  z-index: 10;
+}
+
+main {
+  background: #dfd1ac no-repeat center center;
+  background-size: cover;
+  height: 200%;
+  padding-bottom: 5%;
+  z-index: 1;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+}
+
+.nav-list li {
+  letter-spacing: 3px;
+  margin-left: 32px;
+}
+
+.mobile-menu {
+  display: none;
+  cursor: pointer;
+}
+
+.mobile-menu div {
+  width: 32px;
+  height: 2px;
+  background: #009344;
+  margin: 8px;
+  transition: 0.3s;
+}
+
+
+*{
+  box-sizing: border-box;
+}
+.carrossel{
+  overflow: hidden;
+  height: 300px;
+  width: 1000px;
+  margin: 0 auto;
+  padding-top: 1%;
+  z-index: 1;
+}
+
+.container{
+  display:flex;
+  transition: transform 0.5s ease-in-out;
+  transform: translateX(0);
+  z-index: 1;
+}
+.container img{
+  height: 300px;
+  width:1000px;
+  z-index: 1;
+}
+.opcoes{
+  display: flex;
+  justify-content: center;
+}
+
+
+h1{
+  font-family: quicksand;
+  text-transform: uppercase;
+  text-align: center;
+  padding-top: 2%;
+  font-size: 300%;
+  color: #cf2734;
+}
+.pizzas{
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  text-transform: uppercase;
+}
+figure img{
+  width: 80px;
+  height: 80px;
+}
+footer{
+  background: #23232e;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+footer img{
+  width: 300px;
+  height: 120px;
+}
+@media (max-width: 2000px) {
+  body {
+    overflow-x: hidden;
   }
-  
-  a {
-    color: #fff;
-    text-decoration: none;
-    transition: 0.3s;
-  }
-  
-  a:hover {
-    opacity: 0.7;
-  }
-  
-  .logo {
-    font-size: 24px;
-    text-transform: uppercase;
-    letter-spacing: 4px;
-    color: #cf2734;
-  }
-  
-  nav {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
-    background: #23232e;
-    height: 8vh;
-  }
-  
-  main {
-    background: #dfd1ac no-repeat center center;
-    background-size: cover;
-    height: 200%;
-    padding-bottom: 5%;
-  }
-  
   .nav-list {
-    list-style: none;
-    display: flex;
-  }
-  
-  .nav-list li {
-    letter-spacing: 3px;
-    margin-left: 32px;
-  }
-  
-  .mobile-menu {
-    display: none;
-    cursor: pointer;
-  }
-  
-  .mobile-menu div {
-    width: 32px;
-    height: 2px;
-    background: #009344;
-    margin: 8px;
-    transition: 0.3s;
-  }
-  .primeiro-bunner img{
-    width: 85%;
-    height: 25%;
-    padding-top: 2%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .primeiro-bunner a{
-    display: flex;
-    justify-content: center;
-  }
-  .primeiro-bunner a:hover{
-    opacity: 0.9;
-    transition: 100ms;
-  }
-  .opcoes{
-    display: flex;
-    justify-content: center;
-  }
-  h1{
-    font-family: quicksand;
-    text-transform: uppercase;
-    text-align: center;
-    padding-top: 2%;
-    font-size: 300%;
-    color: #cf2734;
-  }
-  .pizzas{
-    display: flex;
-    justify-content: space-around;
-    text-align: center;
-    text-transform: uppercase;
-  }
-  figure img{
-    width: 80px;
-    height: 80px;
-  }
-  footer{
+    position: absolute;
+    top: 8vh;
+    right: 0;
+    width: 50vw;
+    height: 92vh;
     background: #23232e;
+    flex-direction: column;
     align-items: center;
-  }
-  footer img{
-    width: 400px;
-    height: 200px;
-    align-items: center;
-  }
-  @media (max-width: 2000px) {
-    body {
-      overflow-x: hidden;
-    }
-    .nav-list {
-      position: absolute;
-      top: 8vh;
-      right: 0;
-      width: 50vw;
-      height: 92vh;
-      background: #23232e;
-      flex-direction: column;
-      align-items: center;
-      justify-content: space-around;
-      transform: translateX(100%);
-      transition: transform 0.3s ease-in;
-    }
-    .nav-list li {
-      margin-left: 0;
-      opacity: 0;
-    }
-    .mobile-menu {
-      display: block;
-    }
+    justify-content: space-around;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in;
+    z-index: 10; /* O z index vai servir para deixar a lista no ponto mais alto em sobreposição*/
   }
   
   .nav-list.active {
     transform: translateX(0);
+    z-index: 10; /* E esse aqui garante que quando estiver ativo elavai continuar em sobreposição aos outros */
   }
-  
-  @keyframes navLinkFade {
-    from {
-      opacity: 0;
-      transform: translateX(50px);
-    }
-    to {
-      opacity: 1;
-      transform: translateX(0);
-    }
-  }
-  
-  .mobile-menu.active .line1 {
-    transform: rotate(-45deg) translate(-8px, 8px);
-  }
-  
-  .mobile-menu.active .line2 {
+  .nav-list li {
+    margin-left: 0;
     opacity: 0;
   }
-  
-  .mobile-menu.active .line3 {
-    transform: rotate(45deg) translate(-5px, -7px);
+  .mobile-menu {
+    display: block;
   }
+}
+
+.nav-list.active {
+  transform: translateX(0);
+}
+
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.mobile-menu.active .line1 {
+  transform: rotate(-45deg) translate(-8px, 8px);
+}
+
+.mobile-menu.active .line2 {
+  opacity: 0;
+}
+
+.mobile-menu.active .line3 {
+  transform: rotate(45deg) translate(-5px, -7px);
+}
