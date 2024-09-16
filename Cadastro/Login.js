@@ -25,7 +25,7 @@ var buttons = document.querySelectorAll("button")
 
 //ao clicar em saiba mais, leva a página sobre e faz o pop-up sumir//
 buttons[1].addEventListener("click", function(){
-    window.open ('../Sobre/Sobre.html', 'pagina', "width=650 height=500")
+    window.open ('../Pagina-pedidos/pedidos.html', 'pagina', "width=650 height=500")
     document.getElementById("pop-up").style.display = "none"
 })
 
