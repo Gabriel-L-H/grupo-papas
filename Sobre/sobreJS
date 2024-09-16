@@ -41,3 +41,20 @@ class MobileNavbar {
   
   const mobileNavbar = new MobileNavbar(".mobile-menu",".nav-list",".nav-list li",);
   mobileNavbar.init();
+
+function abriralerta(){
+  Swal.fire({
+    title: "<strong>Sua <u>opinião</u></strong>",
+    icon: "info",
+    html: "O que você achou da nossa história?",
+    showCloseButton: true,
+    showCancelButton: true,
+    focusConfirm: false,
+    confirmButtonText: `
+      <i class="thumbs-up"></i> Gostei!
+    `,
+    cancelButtonText: `
+      <i class="fa fa-thumbs-down"></i> Não gostei.
+    `,
+  });
+}
