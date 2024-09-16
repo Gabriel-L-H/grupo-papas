@@ -1,3 +1,7 @@
+//largura e altura da atual tela em px//
+console.log("Largura atual: "+screen.width)
+console.log("Altura atual: "+screen.height)
+
 //alert ao carregar a página inteira e ocorre a aparição e animação de um pop-up logo após//
 window.onload = function (){
     alert("Bem vindo, essa é a página de Login e Cadastro👍")
