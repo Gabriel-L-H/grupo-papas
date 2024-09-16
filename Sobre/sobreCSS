@@ -228,3 +228,6 @@ footer {
 .text5{
     text-align: left;
 }
+.btn{
+  
+}
