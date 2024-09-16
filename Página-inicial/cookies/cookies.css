@@ -1,0 +1,46 @@
+body{
+    width: 500px ;
+    height: 950px ;
+}
+.cookies1{
+    position: fixed;
+    width: 60%;
+    bottom: 7%;
+    left: 50%;
+    transform: translate(-50%);
+    background-color:rgb(134, 30, 30);
+    border-radius: 30px ;
+    display: none;
+    
+}
+.cookies1.romero{
+    display: block;
+}
+.cookies1 #textocookies{
+   display: flex;
+   align-items: center;
+   text-align: justify; 
+   padding: 10px;
+   color: white;
+}
+.cookies1 #botaocookies{
+    display: flex;
+    margin-left: 50%;
+}
+.cookies1 #botaocookies button{
+   background-color: rgb(255, 255, 255); 
+   border-radius: 20px;
+   font-size: 15px;
+   padding: 8px 10px ;
+   cursor: pointer;
+}
+#maistexto{
+    text-align: left;
+    color: blue;
+    cursor:pointer ;
+    position: relative;
+    right: 260px;
+    top: 20px;
+    font-size: 20px ;
+   
+}
