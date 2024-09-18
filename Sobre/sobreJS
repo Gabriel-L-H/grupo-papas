@@ -1,3 +1,4 @@
+
 const imageUrl = "/Página-sobre/img sobre/papasbaner.png";
 document.getElementById("img").src = imageUrl;
 
@@ -51,10 +52,11 @@ function abriralerta(){
     showCancelButton: true,
     focusConfirm: false,
     confirmButtonText: `
-      <i class="thumbs-up"></i> Gostei!
+      <i class="thumbs up"></i> 👍Gostei!
     `,
     cancelButtonText: `
-      <i class="fa fa-thumbs-down"></i> Não gostei.
+      <i class="thumbs down"></i> 👎
     `,
+    
   });
 }
