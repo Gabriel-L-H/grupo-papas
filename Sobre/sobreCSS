@@ -1,125 +1,137 @@
+
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    margin: 0 ;
+    margin: 0;
     padding: 0;
-    background-image: linear-gradient(180deg, #b9622f, #a7491e, rgb(138, 0, 0) );
+    background-image: linear-gradient(180deg, #1e1f31, #703f28, rgb(138, 0, 0));
     color: #303030;
 }
-*{
+
+* {
     margin: 0;
     padding: 0;
 }
-a{
+
+a {
     color: #fff;
     text-decoration: none;
     transition: 0.3s;
 }
-a:hover{
+
+a:hover {
     opacity: 0.7;
 }
-.logo1{
+
+.logo1 {
     text-align: center;
     font-size: 24px;
     text-transform: uppercase;
     letter-spacing: 4px;
     color: #cf2734;
-  }
-  
-  nav {
+    padding-left: 30%;
+}
+
+nav {
     display: flex;
     justify-content: space-around;
     align-items: center;
     font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
     background: #23232e;
     height: 8vh;
-  }
-  
-  .container {
+    text-align: center;
+}
+
+.container {
     background: #dfd1ac no-repeat center center;
     background-size: cover;
-    height: 200%;
+    height: 250%;
     padding-bottom: 5%;
-  }
-  
-  .nav-list {
+}
+
+.nav-list {
     list-style: none;
     display: flex;
-  }
-  
-  .nav-list li {
+}
+
+.nav-list li {
     letter-spacing: 3px;
     margin-left: 32px;
-  }
-  
-  .mobile-menu {
+}
+
+.mobile-menu {
     display: none;
     cursor: pointer;
-  }
-  
-  .mobile-menu div {
+}
+
+.mobile-menu div {
     width: 32px;
     height: 2px;
     background: #009344;
     margin: 8px;
     transition: 0.3s;
-  }
-  @media (max-width: 2000px) {
+}
+
+@media (max-width: 2000px) {
     body {
-      overflow-x: hidden;
+        overflow-x: hidden;
     }
+
     .nav-list {
-      position: absolute;
-      top: 8vh;
-      right: 0;
-      width: 50vw;
-      height: 92vh;
-      background: #23232e;
-      flex-direction: column;
-      align-items: center;
-      justify-content: space-around;
-      transform: translateX(100%);
-      transition: transform 0.3s ease-in;
+        position: absolute;
+        top: 8vh;
+        right: 0;
+        width: 50vw;
+        height: 92vh;
+        background: #23232e;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in;
     }
+
     .nav-list li {
-      margin-left: 0;
-      opacity: 0;
+        margin-left: 0;
+        opacity: 0;
     }
+
     .mobile-menu {
-      display: block;
+        display: block;
     }
-  }
-  
-  .nav-list.active {
+}
+
+.nav-list.active {
     transform: translateX(0);
-  }
-  
-  @keyframes navLinkFade {
+}
+
+@keyframes navLinkFade {
     from {
-      opacity: 0;
-      transform: translateX(50px);
+        opacity: 0;
+        transform: translateX(50px);
     }
+
     to {
-      opacity: 1;
-      transform: translateX(0);
+        opacity: 1;
+        transform: translateX(0);
     }
-  }
-  
-  .mobile-menu.active .line1 {
+}
+
+.mobile-menu.active .line1 {
     transform: rotate(-45deg) translate(-8px, 8px);
-  }
-  
-  .mobile-menu.active .line2 {
+}
+
+.mobile-menu.active .line2 {
     opacity: 0;
-  }
-  
-  .mobile-menu.active .line3 {
+}
+
+.mobile-menu.active .line3 {
     transform: rotate(45deg) translate(-5px, -7px);
-  }
+}
 
 .container {
     width: 80%;
-    margin: auto  ;
+    margin: auto;
     overflow: hidden;
     padding: 20px;
     padding-left: 0%;
@@ -128,18 +140,18 @@ a:hover{
     background-color: #e6e6e6;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
-h1, h2 {
-    color: #ff4800;
-}
-p{
+
+p {
     padding-bottom: 5%;
     padding-top: 5%;
 }
+
 .paragrafos {
-   padding-left: 7%;
-   width: 85%;
-   padding-top: 20px;
+    padding-left: 7%;
+    width: 85%;
+    padding-top: 50px;
 }
+
 footer {
     text-align: center;
     padding: 15px;
@@ -149,82 +161,441 @@ footer {
 }
 
 .image-container {
-    overflow: hidden;
-    width: auto; 
-    height: 200px; 
-    transition: transform 0.3s ease; 
     cursor: pointer;
+    transition: transform 0.3s ease;
+    overflow: hidden;
+    padding-top: 8vh;
+    width: auto;
+    height: auto;
 }
 
 .image-container img {
     width: 100%;
     height: 100%;
-    transition: transform 0.3s ease; 
+    transition: transform 0.3s ease;
 }
 
 .image-container:hover img {
-    transform: scale(1.2); 
+    transform: scale(1.2);
 }
 
-#sobre{
-    text-align: left;
-    padding: 10px;
-    padding-right: 0px;
+#sobre {
+    text-align: center;
+    padding: 25px;
+    padding-bottom: 1px;
+    padding-right: 10px;
     padding-left: 1px;
-    background-color: #b9622f;
-    color: #ffffff;
+    background-color: #e6e6e6(22, 59%, 45%);
+    color: #ff4800;
     margin-top: 0px;
     margin-left: 0%;
+    width: 100%;
+    font-size: 60px;
+
+}
+
+#img1{
+    float: right;
+    width: 350px;
+    height: 350px;
+    padding-bottom: 30px;
+    padding-top: 0px;
+}
+
+.text1 {
+    text-align: left;
+    padding-top: 50px;
+    padding-bottom: 100px;
+}
+
+#img2{
+    float: left;
+    width: 350px;
+    height: 350px;
+    padding-bottom: 3px;
+    padding-top: 10px;
+}
+
+.text2 {
+    text-align: right;
+    padding-top: 40px;
+    padding-bottom: 100px;
+}
+
+#img3{
+    float: right;
+    width: 350px;
+    height: 350px;
+    padding-bottom: 3px;
+    padding-top: 10px;
+}
+
+.text3 {
+    text-align: left;
+    padding-top: 40px;
+    padding-bottom: 100px;
+}
+
+#img4{
+    float: left;
+    width: 350px;
+    height: 350px;
+    padding-bottom: 5px;
+    padding-top: 10px;
+}
+
+.text4 {
+    text-align: right;
+    padding-top: 40px;
+    padding-bottom: 100px;
+}
+
+#img5{
+    float: right;
+    width: 350px;
+    height: 350px;
+    padding-bottom: 3px;
+    padding-top: 10px;
+}
+
+.text5 {
+    text-align: left;
+    padding-top: 40px;
+    padding-bottom: 100px;
+}
+
+#btn {
+    width: 100%;
+    position: relative;
+    color: rgb(0, 0, 0);
+    background-color: #b1c0d1;
+    bottom: 15px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    overflow: hidden;
+}
+
+#btn:hover {
+    background-color: #7c8691;
+    transform: scale(1.1);
+}
+
+header {
+    z-index: 999;
+    position: fixed;
+    width: 100%;
+}
+
+hr {
+    border: none;
+    height: 1px;
+    background-color: #000;
+    width: 100%;
+    margin-top: 3px;
+}
+
+.container-diferenciais {
     width: 110%;
+    height: 100%;
+    padding-left: 0px;
+    padding-top: 30px;
+}
+
+#diferenciais {
+    width: 100%;
+    height: 100%;
+    padding-left: 0px;
+}
+
+#hrsobre {
+    border: none;
+    height: 4px;
+    background-color: rgb(255, 102, 0);
+    width: 100%;
+    margin-top: 3px;
+}
+
+#txtdif {
+    padding-top: 20px;
+    padding-left: 40px;
+    position: absolute;
+    color: white;
+    font-size: 350%;
+}
+
+#sec-dif {
+    background-image: url(imgs/background-diferenciais.png);
+    width: 1500px;
+    height: 1160px;
+}
+
+.pizzaimg img {
+    position: absolute;
+    width: 40%;
 
 }
 
-.img1 img{
-    float: right;
-    width: 250px;
-    height: 250px;
+.diftext1 {
+    padding-left: 2px;
+    color: white;
+    position: absolute;
+    border-radius: 10px;
+    border-color: #703f28;
+    border-style: groove;
+    width: 35%;
+    height: 14%;
+    background-color: #ffa977;
+    top: 2580px;
+    bottom: 30px;
+    right: 160px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    overflow: hidden;
 }
 
-.text1{
-    text-align: left;
+.diftext2 {
+    padding-left: 2px;
+    color: white;
+    position: absolute;
+    border-radius: 10px;
+    border-color: #703f28;
+    border-style: groove;
+    width: 35%;
+    height: 14%;
+    background-color: #ffa977;
+    top: 2680px;
+    bottom: 30px;
+    right: 160px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    overflow: hidden;
 }
 
-.img2 img{
-    float: left;
-    width: 250px;
-    height: 250px;
+.diftext3 {
+    padding-left: 2px;
+    color: white;
+    position: absolute;
+    border-radius: 10px;
+    border-color: #703f28;
+    border-style: groove;
+    width: 35%;
+    height: 14%;
+    background-color: #ffa977;
+    top: 2780px;
+    bottom: 30px;
+    right: 160px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    overflow: hidden;
 }
 
-.text2{
-    text-align: right;
+.diftext4 {
+    padding-left: 2px;
+    color: white;
+    position: absolute;
+    border-radius: 10px;
+    border-color: #703f28;
+    border-style: groove;
+    width: 35%;
+    height: 14%;
+    background-color: #ffa977;
+    top: 2880px;
+    bottom: 30px;
+    right: 160px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    overflow: hidden;
 }
 
-.img3 img{
-    float: right;
-    width: 250px;
-    height: 250px;
+.diftext5 {
+    padding-left: 2px;
+    color: white;
+    position: absolute;
+    border-radius: 10px;
+    border-color: #703f28;
+    border-style: groove;
+    width: 35%;
+    height: 14%;
+    background-color: #ffa977;
+    top: 2980px;
+    bottom: 30px;
+    right: 160px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    overflow: hidden;
 }
 
-.text3{
-    text-align: left;
+.diftext6 {
+    padding-left: 2px;
+    color: white;
+    position: absolute;
+    border-radius: 10px;
+    border-color: #703f28;
+    border-style: groove;
+    width: 35%;
+    height: 14%;
+    background-color: #ffa977;
+    top: 3080px;
+    bottom: 30px;
+    right: 160px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    overflow: hidden;
 }
 
-.img4 img{
-    float: left;
-    width: 250px;
-    height: 280px;
+.diftext7 {
+    padding-left: 2px;
+    color: white;
+    position: absolute;
+    border-radius: 10px;
+    border-color: #703f28;
+    border-style: groove;
+    width: 35%;
+    height: 14%;
+    background-color: #ffa977;
+    top: 3180px;
+    bottom: 30px;
+    right: 160px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    overflow: hidden;
 }
 
-.text4{
-    text-align: right;
+.diftext8 {
+    padding-left: 2px;
+    color: white;
+    position: absolute;
+    border-radius: 10px;
+    border-color: #703f28;
+    border-style: groove;
+    width: 35%;
+    height: 14%;
+    background-color: #ffa977;
+    top: 3280px;
+    bottom: 30px;
+    right: 160px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    overflow: hidden;
+}
+.diftext1:hover{
+    transform: scale(1.1);
+}
+.diftext2:hover{
+    transform: scale(1.1);
+}
+.diftext3:hover{
+    transform: scale(1.1);
+}
+.diftext4:hover{
+    transform: scale(1.1);
+}
+.diftext5:hover{
+    transform: scale(1.1);
+}
+.diftext6:hover{
+    transform: scale(1.1);
+}
+.diftext7:hover{
+    transform: scale(1.1);
+}
+.diftext8:hover{
+    transform: scale(1.1);
 }
 
-.img5 img{
-    float: right;
-    width: 250px;
-    height: 300px;
+
+
+h1 {
+    color: rgb(153, 47, 15);
 }
 
-.text5{
-    text-align: left;
+@media screen and (max-width:641px) {
+
+    <div class="image-container">
+    <img id="img" src="/imgs/Papasbaner-celular.png" alt="Imagem">
+    </div>
+   
+    .text1,.text2,.text3,.text4,.text5{
+        text-align: center;
+    }
+
+    #img1,#img2,#img3,#img4,#img5 {
+        display: none;
+    }
+
+    .logo1 {
+        font-size: 20px;
+        padding-left: 20px;
+    }
+
+    #txtdif {
+        font-size: 30px;
+        right: 15%;
+    }
+
+    .pizzaimg {
+        display: none;
+    }
+
+    #sobre {
+        text-align: center;
+    }
+
+    .diftext1 {
+        top: 3450px;
+        width: 75%;
+        right: 50px;
+    }
+
+    .diftext2 {
+        top: 3570px;
+        width: 75%;
+        right: 50px
+    }
+
+    .diftext3 {
+        top: 3690px;
+        width: 75%;
+        right: 50px
+    }
+
+    .diftext4 {
+        top: 3810px;
+        width: 75%;
+        right: 50px
+    }
+
+    .diftext5 {
+        top: 3930px;
+        width: 75%;
+        right: 50px
+    }
+
+    .diftext6 {
+        height: 125px;
+        top: 4050px;
+        width: 75%;
+        right: 50px
+    }
+
+    .diftext7 {
+        top: 4185px;
+        width: 75%;
+        right: 50px
+    }
+
+    .diftext8 {
+        top: 4305px;
+        width: 75%;
+        right: 50px
+    }
+
+    #btn {
+        bottom: 15px;
+    }
+
+    #sec-dif {
+        background-image: url('/imgs/background-diferenciais-celular.png');
+    }
+
 }

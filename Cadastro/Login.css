@@ -4,7 +4,8 @@ body{
 }
 .container{
     align-items: center;
-    width: 32%;
+    /*width 21 para o PC da escola a fim de ser melhor em apresentações*/
+    width: 21%;
     height: 400px;
     margin: auto;
     background: linear-gradient(90deg, #d31402, #cf1403);
@@ -78,7 +79,8 @@ form img{
     display: flex;
     position: relative;
     bottom: 30px;
-    left: 235px;
+     /*left para o PC da escola, no meu note(Gab) é 235 */
+    left: 230px;
     width: 24px;
     height: 24px;
 }
