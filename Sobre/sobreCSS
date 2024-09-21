@@ -161,12 +161,12 @@ footer {
 }
 
 .image-container {
+    cursor: pointer;
+    transition: transform 0.3s ease;
     overflow: hidden;
     padding-top: 8vh;
     width: auto;
     height: auto;
-    transition: transform 0.3s ease;
-    cursor: pointer;
 }
 
 .image-container img {
@@ -270,10 +270,14 @@ footer {
     color: rgb(0, 0, 0);
     background-color: #b1c0d1;
     bottom: 15px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    overflow: hidden;
 }
 
 #btn:hover {
     background-color: #7c8691;
+    transform: scale(1.1);
 }
 
 header {
@@ -343,7 +347,10 @@ hr {
     background-color: #ffa977;
     top: 2580px;
     bottom: 30px;
-    right: 150px;
+    right: 160px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    overflow: hidden;
 }
 
 .diftext2 {
@@ -358,7 +365,10 @@ hr {
     background-color: #ffa977;
     top: 2680px;
     bottom: 30px;
-    right: 150px;
+    right: 160px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    overflow: hidden;
 }
 
 .diftext3 {
@@ -373,7 +383,10 @@ hr {
     background-color: #ffa977;
     top: 2780px;
     bottom: 30px;
-    right: 150px;
+    right: 160px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    overflow: hidden;
 }
 
 .diftext4 {
@@ -388,7 +401,10 @@ hr {
     background-color: #ffa977;
     top: 2880px;
     bottom: 30px;
-    right: 150px;
+    right: 160px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    overflow: hidden;
 }
 
 .diftext5 {
@@ -403,7 +419,10 @@ hr {
     background-color: #ffa977;
     top: 2980px;
     bottom: 30px;
-    right: 150px;
+    right: 160px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    overflow: hidden;
 }
 
 .diftext6 {
@@ -418,7 +437,10 @@ hr {
     background-color: #ffa977;
     top: 3080px;
     bottom: 30px;
-    right: 150px;
+    right: 160px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    overflow: hidden;
 }
 
 .diftext7 {
@@ -433,7 +455,10 @@ hr {
     background-color: #ffa977;
     top: 3180px;
     bottom: 30px;
-    right: 150px;
+    right: 160px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    overflow: hidden;
 }
 
 .diftext8 {
@@ -448,31 +473,53 @@ hr {
     background-color: #ffa977;
     top: 3280px;
     bottom: 30px;
-    right: 150px;
+    right: 160px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    overflow: hidden;
 }
+.diftext1:hover{
+    transform: scale(1.1);
+}
+.diftext2:hover{
+    transform: scale(1.1);
+}
+.diftext3:hover{
+    transform: scale(1.1);
+}
+.diftext4:hover{
+    transform: scale(1.1);
+}
+.diftext5:hover{
+    transform: scale(1.1);
+}
+.diftext6:hover{
+    transform: scale(1.1);
+}
+.diftext7:hover{
+    transform: scale(1.1);
+}
+.diftext8:hover{
+    transform: scale(1.1);
+}
+
+
 
 h1 {
     color: rgb(153, 47, 15);
 }
 
 @media screen and (max-width:641px) {
-    #sec-dif {
-        background-image: url('/imgs/Background0-0.png');
-    }
 
-    .text1,
-    .text2,
-    .text3,
-    .text4,
-    .text5 {
+    <div class="image-container">
+    <img id="img" src="/imgs/Papasbaner-celular.png" alt="Imagem">
+    </div>
+   
+    .text1,.text2,.text3,.text4,.text5{
         text-align: center;
     }
 
-    #img1,
-    #img2,
-    #img3,
-    #img4,
-    #img5 {
+    #img1,#img2,#img3,#img4,#img5 {
         display: none;
     }
 
@@ -547,5 +594,8 @@ h1 {
         bottom: 15px;
     }
 
-    <div class="image-container"><img id="img" src="/imgs/Papasbaner.png" alt="Imagem"></div>
+    #sec-dif {
+        background-image: url('/imgs/background-diferenciais-celular.png');
+    }
+
 }
