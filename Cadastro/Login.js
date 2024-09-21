@@ -53,300 +53,82 @@ document.getElementById("text-cpf").style.position = "relative"
 document.getElementById("text-cpf").style.left = 18 + "%"
 document.getElementById("text-cpf").style.bottom = -8 + "px"
 
-//animação do label de Email ao estar em focus//
- 
-function animEmail(){
-    //verifica se input já está preenchido, para evitar reiniciar a animação//
-    if (document.getElementById("email").value != ""){
+var labels = document.querySelectorAll("label")
+var inputs = document.querySelectorAll("input")
+
+const animLabel = function (a) {
+    if (inputs[a].value != ""){
         return
     }
-    //caso não esteja a animação do label ocorre//
     else{
-    document.getElementById("text-email").style.color = "blue";
+    labels[a].style.color = "blue";
  
     var p = 0
     clearInterval(id)
-    var id = setInterval(frame, 3)
-    function frame(){
+    var id = setInterval(frame0, 3)
+    function frame0(){
         if (p == 30){
             clearInterval(id)
         }
  
         else{
             p++
-            document.getElementById("text-email").style.bottom = p + "px"
+            labels[a].style.bottom = p + "px"
         }
     }
 }
-};
- 
- 
-//animação do label de Email ao estar em blur//
-function animEmailCancel(){
-    //verifica se já está ou não preenchido o input, para manter o label acima//
-    if (document.getElementById("email").value.trim() == ""){
-    var p = 30
-    document.getElementById("text-email").style.color = "white"
-    clearInterval(id2)
-    var id2 = setInterval(frame, 3)
-    function frame(){
-        if (p == 3){
-            clearInterval(id2)
-        }
- 
-        else{
-            p--
-            document.getElementById("text-email").style.bottom = p + "px"
-        }
-    }
-}
-//se estiver preenchido, fica onde está//
-    else{
-        document.getElementById("text-email").style.color = "blue"
-        document.getElementById("text-email").style.bottom = 30 + "px"
-    }
-};
-
-
-//animação do label de senha ao estar em focus//
-function animSenha(){
-        //verifica se input já está preenchido, para evitar reiniciar a animação//
-        if (document.getElementById("senha").value != ""){
-            return
-        }
-        //caso não esteja a animação do label ocorre//
-        else{
-    document.getElementById("text-senha").style.color = "blue";
- 
-    var p = 0
-    clearInterval(id3)
-    var id3 = setInterval(frame, 3)
-    function frame(){
-        if (p == 30){
-            clearInterval(id3)
-        }
- 
-        else{
-            p++
-            document.getElementById("text-senha").style.bottom = p + "px"
-        }
-    }
-}
-};
- 
- 
-//animação do label de senha ao estar em blur//
-function animSenhaCancel(){
-    //verifica se já está ou não preenchido o input, para manter o label acima//
-    if (document.getElementById("senha").value.trim() == ""){
-    document.getElementById("text-senha").style.color = "white";
- 
-    var p = 30
-    clearInterval(id4)
-    var id4 = setInterval(frame, 3)
-    function frame(){
-        if (p == 3){
-            clearInterval(id4)
-        }
- 
-        else{
-            p--
-            document.getElementById("text-senha").style.bottom = p + "px"
-        }
-    }
 }
 
-//se estiver preenchido, fica onde está//
-    else{
-        document.getElementById("text-senha").style.color = "blue"
-        document.getElementById("text-senha").style.bottom = 30 + "px"
-    }
-};
-
-//animação do label de Nome ao estar em focus//
-function animNome(){
-    //verifica se input já está preenchido, para evitar reiniciar a animação//
-    if (document.getElementById("nome").value != ""){
-        return
-    }
-    //caso não esteja a animação do label ocorre//
-    else{
-    document.getElementById("text-nome").style.color = "blue";
- 
-    var p = 15
-    clearInterval(id)
-    var id = setInterval(frame, 3)
-    function frame(){
-        if (p == 30){
-            clearInterval(id)
+const animLabelCancel = function (b){
+    if (inputs[b].value.trim() == ""){
+        var p = 30
+        labels[b].style.color = "white"
+        if(b === 0 || b === 1 || b === 2){
+        clearInterval(id2)
+        var id2 = setInterval(frame2, 3)
+        function frame2(){
+            if (p == 2){
+                clearInterval(id2)
+            }
+     
+            else{
+                p--
+                labels[b].style.bottom = p + "px"
+            }
         }
- 
-        else{
-            p++
-            document.getElementById("text-nome").style.bottom = p + "px"
-        }
-    }
-}
-};
- 
-//animação do label de Nome ao estar em blur//
-function animNomeCancel(){
-    //verifica se já está ou não preenchido o input, para manter o label acima//
-    if (document.getElementById("nome").value.trim() == ""){
-    document.getElementById("text-nome").style.color = "white";
- 
-    var p = 30
-    clearInterval(id2)
-    var id2 = setInterval(frame, 3)
-    function frame(){
-        if (p == 15){
-            clearInterval(id2)
-        }
- 
-        else{
-            p--
-            document.getElementById("text-nome").style.bottom = p + "px"
-        }
-    }
-}
-
-//se estiver preenchido, fica onde está//
-    else{
-        document.getElementById("text-nome").style.color = "blue"
-        document.getElementById("text-nome").style.bottom = 30 + "px"
-    }
-};
-
-//animação do label de CPF ao estar em focus//
-function animCPF(){
-    //verifica se input já está preenchido, para evitar reiniciar a animação//
-    if (document.getElementById("cpf").value != ""){
-        return
     }
 
-    //caso não esteja a animação do label ocorre//
-    else{
-    document.getElementById("text-cpf").style.color = "blue";
-    var p = -8
-    clearInterval(id)
-    var id = setInterval(frame, 3)
-    function frame(){
-        if (p == 15){
-            clearInterval(id)
+        else if(b === 3 || b === 4){
+            var id2 = setInterval(frame2, 3)
+            function frame2() {
+                if (p <= -8) {
+                    clearInterval(id2)
+                }
+
+                else {
+                    p--
+                    labels[b].style.bottom = p + "px"
+                }
+            }
         }
- 
-        else{
-            p++
-            document.getElementById("text-cpf").style.bottom = p + "px"
-        }
-    }
-}
-};
- 
-//animação do label de cpf ao estar em blur//
-function animCPFCancel(){
-    //verifica se já está ou não preenchido o input, para manter o label acima//
-    if (document.getElementById("cpf").value.trim() == ""){
-    document.getElementById("text-cpf").style.color = "white";
- 
-    var p = 15
-    clearInterval(id2)
-    var id2 = setInterval(frame, 3)
-    function frame(){
-        if (p == -8){
-            clearInterval(id2)
-        }
- 
-        else{
-            p--
-            document.getElementById("text-cpf").style.bottom = p + "px"
-        }
-    }
 }
 
     //se estiver preenchido, fica onde está//
-    else{
-        document.getElementById("text-cpf").style.color = "blue"
-        document.getElementById("text-cpf").style.bottom = 15 + "px"
-    }
-};
-
-//animação do label de Telefone ao estar em focus//
-function animTel(){
-        //verifica se input já está preenchido, para evitar reiniciar a animação//
-        if (document.getElementById("tel").value != ""){
-            return
-        }
-    
-        //caso não esteja a animação do label ocorre//
         else{
-    document.getElementById("text-tel").style.color = "blue";
-    var p = -8
-    clearInterval(id)
-    var id = setInterval(frame, 3)
-    function frame(){
-        if (p == 15){
-            clearInterval(id)
+            labels[b].style.color = "blue"
+            labels[b].style.bottom = 30 + "px"
         }
- 
-        else{
-            p++
-            document.getElementById("text-tel").style.bottom = p + "px"
-        }
-    }
-}
-};
- 
- 
-//animação do label de Telefone ao estar em blur//
-function animTelCancel(){
-    //verifica se já está ou não preenchido o input, para manter o label acima//
-    if (document.getElementById("tel").value.trim() == ""){
-    document.getElementById("text-tel").style.color = "white";
-    var p = 15
-    clearInterval(id2)
-    var id2 = setInterval(frame, 3)
-    function frame(){
-        if (p == -7){
-            clearInterval(id2)
-        }
- 
-        else{
-            p--
-            document.getElementById("text-tel").style.bottom = p + "px"
-        }
-    }
 }
 
-    //se estiver preenchido, fica onde está//
-    else{
-        document.getElementById("text-tel").style.color = "blue"
-        document.getElementById("text-tel").style.bottom = 15 + "px"
-    }
-};
+inputs.forEach((item, indice) => {
+    item.addEventListener("focus", () => animLabel(indice))
+    item.addEventListener("blur", () => animLabelCancel(indice))
+})
  
-//convertendo label email, senha, nome, cpf e telefone para variaveis
+//convertendo label email, cpf e telefone para variaveis
 var elementEmail = document.getElementById("email");
-var elementSenha = document.getElementById("senha");
-var elementNome = document.getElementById("nome");
 var elementCPF = document.getElementById("cpf");
 var elementTel = document.getElementById("tel");
- 
-//chamando as funções de animação do email, senha, nome, cpf e telefone ao estar em focus ou blur//
-elementEmail.addEventListener("focus", animEmail);
-elementEmail.addEventListener("blur", animEmailCancel);
- 
-elementSenha.addEventListener("focus", animSenha);
-elementSenha.addEventListener("blur", animSenhaCancel);
- 
-elementNome.addEventListener("focus", animNome);
-elementNome.addEventListener("blur", animNomeCancel);
-
-elementCPF.addEventListener("focus", animCPF);
-elementCPF.addEventListener("blur", animCPFCancel);
-
-elementTel.addEventListener("focus", animTel);
-elementTel.addEventListener("blur", animTelCancel);
 
 //ao mudar o input email todos seus valores (digitos) serão convertidos para minúsculos automaticamente//
 elementEmail.addEventListener("change", function(){
@@ -490,8 +272,6 @@ function animForm(){
             forms.style.left = a + "px"
         }
        
-        var inputs = document.querySelectorAll("input")
-        var labels = document.querySelectorAll("label")
         var imgs = document.querySelectorAll("img")
         
         inputs[0].style.width = 230 + "px"
@@ -565,8 +345,6 @@ function animFormLogin(){
                 forms.style.left = a + "px"
             }
            
-            var inputs = document.querySelectorAll("input")
-            var labels = document.querySelectorAll("label")
             var imgs = document.querySelectorAll("img")
             
             inputs[0].style.width = 190 + "px"
