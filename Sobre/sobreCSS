@@ -72,7 +72,7 @@ nav {
     transition: 0.3s;
 }
 
-@media (max-width: 2000px) {
+@media screen and (max-width: 2000px) {
     body {
         overflow-x: hidden;
     }
@@ -331,7 +331,8 @@ hr {
 
 .pizzaimg img {
     position: absolute;
-    width: 40%;
+    width: 47%;
+    top: 50px;
 
 }
 
@@ -342,12 +343,12 @@ hr {
     border-radius: 10px;
     border-color: #703f28;
     border-style: groove;
-    width: 35%;
-    height: 14%;
+    width: 44%;
+    height: 8%;
     background-color: #ffa977;
-    top: 2580px;
+    top: 200px;
     bottom: 30px;
-    right: 160px;
+    right: 25px;
     cursor: pointer;
     transition: transform 0.3s ease;
     overflow: hidden;
@@ -360,12 +361,12 @@ hr {
     border-radius: 10px;
     border-color: #703f28;
     border-style: groove;
-    width: 35%;
-    height: 14%;
+    width: 44%;
+    height: 8%;
     background-color: #ffa977;
-    top: 2680px;
+    top: 305px;
     bottom: 30px;
-    right: 160px;
+    right: 25px;
     cursor: pointer;
     transition: transform 0.3s ease;
     overflow: hidden;
@@ -378,12 +379,12 @@ hr {
     border-radius: 10px;
     border-color: #703f28;
     border-style: groove;
-    width: 35%;
-    height: 14%;
+    width: 44%;
+    height: 8%;
     background-color: #ffa977;
-    top: 2780px;
+    top: 410px;
     bottom: 30px;
-    right: 160px;
+    right: 25px;
     cursor: pointer;
     transition: transform 0.3s ease;
     overflow: hidden;
@@ -396,12 +397,12 @@ hr {
     border-radius: 10px;
     border-color: #703f28;
     border-style: groove;
-    width: 35%;
-    height: 14%;
+    width: 44%;
+    height: 8%;
     background-color: #ffa977;
-    top: 2880px;
+    top: 515px;
     bottom: 30px;
-    right: 160px;
+    right: 25px;
     cursor: pointer;
     transition: transform 0.3s ease;
     overflow: hidden;
@@ -414,12 +415,12 @@ hr {
     border-radius: 10px;
     border-color: #703f28;
     border-style: groove;
-    width: 35%;
-    height: 14%;
+    width: 44%;
+    height: 8%;
     background-color: #ffa977;
-    top: 2980px;
+    top: 620px;
     bottom: 30px;
-    right: 160px;
+    right: 25px;
     cursor: pointer;
     transition: transform 0.3s ease;
     overflow: hidden;
@@ -432,12 +433,12 @@ hr {
     border-radius: 10px;
     border-color: #703f28;
     border-style: groove;
-    width: 35%;
-    height: 14%;
+    width: 44%;
+    height: 8%;
     background-color: #ffa977;
-    top: 3080px;
+    top: 725px;
     bottom: 30px;
-    right: 160px;
+    right: 25px;
     cursor: pointer;
     transition: transform 0.3s ease;
     overflow: hidden;
@@ -450,12 +451,12 @@ hr {
     border-radius: 10px;
     border-color: #703f28;
     border-style: groove;
-    width: 35%;
-    height: 14%;
+    width: 44%;
+    height: 8%;
     background-color: #ffa977;
-    top: 3180px;
+    top: 830px;
     bottom: 30px;
-    right: 160px;
+    right: 25px;
     cursor: pointer;
     transition: transform 0.3s ease;
     overflow: hidden;
@@ -468,12 +469,12 @@ hr {
     border-radius: 10px;
     border-color: #703f28;
     border-style: groove;
-    width: 35%;
-    height: 14%;
+    width: 44%;
+    height: 8%;
     background-color: #ffa977;
-    top: 3280px;
+    top: 935px;
     bottom: 30px;
-    right: 160px;
+    right: 25px;
     cursor: pointer;
     transition: transform 0.3s ease;
     overflow: hidden;
@@ -503,18 +504,32 @@ hr {
     transform: scale(1.1);
 }
 
-
-
 h1 {
     color: rgb(153, 47, 15);
 }
 
+.chocolate{
+    opacity: 0;
+    filter: blur(10px);
+    transition: all 2s;
+}
+.show{
+    opacity: 1;
+    filter: blur(0px);
+    transition: all 2s;
+}
+
+
+
+
+
+
+
+
+
+/* PARA CELULAR!!!!!*/
 @media screen and (max-width:641px) {
 
-    <div class="image-container">
-    <img id="img" src="/imgs/Papasbaner-celular.png" alt="Imagem">
-    </div>
-   
     .text1,.text2,.text3,.text4,.text5{
         text-align: center;
     }
@@ -597,5 +612,7 @@ h1 {
     #sec-dif {
         background-image: url('/imgs/background-diferenciais-celular.png');
     }
+
+
 
 }
