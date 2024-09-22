@@ -5,7 +5,7 @@ body{
 .container{
     align-items: center;
     /*width 21 para o PC da escola a fim de ser melhor em apresentações*/
-    width: 21%;
+    width: 30%;
     height: 400px;
     margin: auto;
     background: linear-gradient(90deg, #d31402, #cf1403);

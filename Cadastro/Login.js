@@ -62,28 +62,46 @@ const animLabel = function (a) {
     }
     else{
     labels[a].style.color = "blue";
- 
-    var p = 0
-    clearInterval(id)
-    var id = setInterval(frame0, 3)
-    function frame0(){
-        if (p == 30){
-            clearInterval(id)
+
+    if (a === 2){
+        var p = 15
+        clearInterval(id)
+        var id = setInterval(frame0, 3)
+        function frame0(){
+            if (p == 45){
+                clearInterval(id)
+            }
+        
+            else{
+                p++
+                labels[a].style.bottom = p + "px"
+            }
         }
- 
-        else{
-            p++
-            labels[a].style.bottom = p + "px"
+        }
+
+    else{
+        var p = 0
+        clearInterval(id)
+        var id = setInterval(frame0, 3)
+        function frame0(){
+            if (p == 30){
+                clearInterval(id)
+            }
+        
+            else{
+                p++
+                labels[a].style.bottom = p + "px"
+            }
         }
     }
-}
+}   
 }
 
 const animLabelCancel = function (b){
     if (inputs[b].value.trim() == ""){
         var p = 30
         labels[b].style.color = "white"
-        if(b === 0 || b === 1 || b === 2){
+        if(b === 0 || b === 1){
         clearInterval(id2)
         var id2 = setInterval(frame2, 3)
         function frame2(){
@@ -97,6 +115,20 @@ const animLabelCancel = function (b){
             }
         }
     }
+
+        if (b === 2) {
+            var id2 = setInterval(frame2, 3)
+            function frame2() {
+                if (p <= 15) {
+                    clearInterval(id2)
+                }
+
+                else {
+                    p--
+                    labels[b].style.bottom = p + "px"
+                }
+            }
+        }
 
         else if(b === 3 || b === 4){
             var id2 = setInterval(frame2, 3)
