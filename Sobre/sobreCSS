@@ -14,31 +14,102 @@ body {
 }
 
 a {
-    color: #fff;
+    color: #ffbd59;
     text-decoration: none;
     transition: 0.3s;
+
 }
 
 a:hover {
     opacity: 0.7;
 }
 
-.logo1 {
-    text-align: center;
-    font-size: 24px;
-    text-transform: uppercase;
-    letter-spacing: 4px;
-    color: #cf2734;
-    padding-left: 30%;
+.nome {
+    color: white;
+    padding-right: 60%;
+    text-decoration: underline;
+    padding-top: 30px;
 }
 
-nav {
+.logo1 {
+    position: absolute;
+    width: 23%;
+    z-index: 999;
+    right: 75%;
+    padding-top: 40px;
+    border-radius: 10%;
+    height: 350%;
+}
+
+
+
+
+
+
+#btn1 {
+
+    color: #ffbd59;
+    background-color: #23232e;
+    border-radius: 40%;
+    position: fixed;
+    width: 8%;
+    position: absolute;
+    bottom: 2px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    font-size: 130%;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    left: 90%;
+
+}
+
+#btn1:hover {
+    background-color: #38384d;
+}
+
+.copacabana1 {
+    font-family: pokemon;
+    font-size: 150%;
+    padding-left: 25%;
+
+}
+
+.copacabana2 {
+    font-family: pokemon;
+    font-size: 150%;
+}
+
+.copacabana3 {
+    font-family: pokemon;
+    font-size: 150%;
+}
+
+.copacabana4 {
+    font-family: pokemon;
+    font-size: 150%;
+}
+
+.botãobar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
+    background: #575770;
+    height: 8vh;
+    text-align: center;
+}
+
+.navbar {
+
+    position: fixed;
+    width: 100%;
     display: flex;
     justify-content: space-around;
     align-items: center;
     font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
     background: #23232e;
-    height: 8vh;
+    height: 6vh;
     text-align: center;
 }
 
@@ -47,86 +118,6 @@ nav {
     background-size: cover;
     height: 250%;
     padding-bottom: 5%;
-}
-
-.nav-list {
-    list-style: none;
-    display: flex;
-}
-
-.nav-list li {
-    letter-spacing: 3px;
-    margin-left: 32px;
-}
-
-.mobile-menu {
-    display: none;
-    cursor: pointer;
-}
-
-.mobile-menu div {
-    width: 32px;
-    height: 2px;
-    background: #009344;
-    margin: 8px;
-    transition: 0.3s;
-}
-
-@media screen and (max-width: 2000px) {
-    body {
-        overflow-x: hidden;
-    }
-
-    .nav-list {
-        position: absolute;
-        top: 8vh;
-        right: 0;
-        width: 50vw;
-        height: 92vh;
-        background: #23232e;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-around;
-        transform: translateX(100%);
-        transition: transform 0.3s ease-in;
-    }
-
-    .nav-list li {
-        margin-left: 0;
-        opacity: 0;
-    }
-
-    .mobile-menu {
-        display: block;
-    }
-}
-
-.nav-list.active {
-    transform: translateX(0);
-}
-
-@keyframes navLinkFade {
-    from {
-        opacity: 0;
-        transform: translateX(50px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-.mobile-menu.active .line1 {
-    transform: rotate(-45deg) translate(-8px, 8px);
-}
-
-.mobile-menu.active .line2 {
-    opacity: 0;
-}
-
-.mobile-menu.active .line3 {
-    transform: rotate(45deg) translate(-5px, -7px);
 }
 
 .container {
@@ -179,7 +170,19 @@ footer {
     transform: scale(1.2);
 }
 
+@font-face {
+    font-family: 'pokemon';
+    src: url(../codes-sobre/fonts/DancingScript-VariableFont_wght.ttf);
+
+    font-family: 'bella';
+    src: url(../codes-sobre/fonts/Butler_Black_Stencil.otf);
+
+    font-family: 'brino';
+    src: url(../codes-sobre/fonts/Madina.ttf);
+}
+
 #sobre {
+
     text-align: center;
     padding: 25px;
     padding-bottom: 1px;
@@ -190,11 +193,13 @@ footer {
     margin-top: 0px;
     margin-left: 0%;
     width: 100%;
-    font-size: 60px;
+    font-size: 100px;
+    font-family: brino;
+
 
 }
 
-#img1{
+#img1 {
     float: right;
     width: 350px;
     height: 350px;
@@ -208,7 +213,7 @@ footer {
     padding-bottom: 100px;
 }
 
-#img2{
+#img2 {
     float: left;
     width: 350px;
     height: 350px;
@@ -222,7 +227,7 @@ footer {
     padding-bottom: 100px;
 }
 
-#img3{
+#img3 {
     float: right;
     width: 350px;
     height: 350px;
@@ -236,7 +241,7 @@ footer {
     padding-bottom: 100px;
 }
 
-#img4{
+#img4 {
     float: left;
     width: 350px;
     height: 350px;
@@ -250,7 +255,7 @@ footer {
     padding-bottom: 100px;
 }
 
-#img5{
+#img5 {
     float: right;
     width: 350px;
     height: 350px;
@@ -267,13 +272,19 @@ footer {
 #btn {
     width: 100%;
     position: relative;
-    color: rgb(0, 0, 0);
+    color: rgb(82, 68, 59);
     background-color: #b1c0d1;
     bottom: 15px;
     cursor: pointer;
     transition: transform 0.3s ease;
     overflow: hidden;
 }
+
+#btn:hover {
+    background-color: #7c8691;
+    transform: scale(1.1);
+}
+
 
 #btn:hover {
     background-color: #7c8691;
@@ -479,28 +490,36 @@ hr {
     transition: transform 0.3s ease;
     overflow: hidden;
 }
-.diftext1:hover{
+
+.diftext1:hover {
     transform: scale(1.1);
 }
-.diftext2:hover{
+
+.diftext2:hover {
     transform: scale(1.1);
 }
-.diftext3:hover{
+
+.diftext3:hover {
     transform: scale(1.1);
 }
-.diftext4:hover{
+
+.diftext4:hover {
     transform: scale(1.1);
 }
-.diftext5:hover{
+
+.diftext5:hover {
     transform: scale(1.1);
 }
-.diftext6:hover{
+
+.diftext6:hover {
     transform: scale(1.1);
 }
-.diftext7:hover{
+
+.diftext7:hover {
     transform: scale(1.1);
 }
-.diftext8:hover{
+
+.diftext8:hover {
     transform: scale(1.1);
 }
 
@@ -508,12 +527,13 @@ h1 {
     color: rgb(153, 47, 15);
 }
 
-.chocolate{
+.chocolate {
     opacity: 0;
     filter: blur(10px);
     transition: all 2s;
 }
-.show{
+
+.show {
     opacity: 1;
     filter: blur(0px);
     transition: all 2s;
@@ -530,11 +550,19 @@ h1 {
 /* PARA CELULAR!!!!!*/
 @media screen and (max-width:641px) {
 
-    .text1,.text2,.text3,.text4,.text5{
+    .text1,
+    .text2,
+    .text3,
+    .text4,
+    .text5 {
         text-align: center;
     }
 
-    #img1,#img2,#img3,#img4,#img5 {
+    #img1,
+    #img2,
+    #img3,
+    #img4,
+    #img5 {
         display: none;
     }
 
