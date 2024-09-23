@@ -75,20 +75,11 @@ a:hover {
 
 }
 
-.copacabana2 {
+.copacabana2, .copacabana3, .copacabana4 {
     font-family: pokemon;
     font-size: 150%;
 }
 
-.copacabana3 {
-    font-family: pokemon;
-    font-size: 150%;
-}
-
-.copacabana4 {
-    font-family: pokemon;
-    font-size: 150%;
-}
 
 .botãobar {
     display: flex;
@@ -114,13 +105,6 @@ a:hover {
 }
 
 .container {
-    background: #dfd1ac no-repeat center center;
-    background-size: cover;
-    height: 250%;
-    padding-bottom: 5%;
-}
-
-.container {
     width: 80%;
     margin: auto;
     overflow: hidden;
@@ -130,6 +114,10 @@ a:hover {
     padding-top: 0%;
     background-color: #e6e6e6;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background: #dfd1ac no-repeat center center;
+    background-size: cover;
+    height: 250%;
+    padding-bottom: 5%;
 }
 
 p {
@@ -285,11 +273,6 @@ footer {
     transform: scale(1.1);
 }
 
-
-#btn:hover {
-    background-color: #7c8691;
-    transform: scale(1.1);
-}
 
 header {
     z-index: 999;
