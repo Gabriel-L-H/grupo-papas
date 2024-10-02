@@ -266,10 +266,6 @@ function animForm(){
     //adicionando p depois de um tempo
     setTimeout(function () {var p = document.querySelectorAll("p")
         p[1].style.display = "block"
-        p[1].id = "p1"
-        document.getElementById("p1").style.left = 56 + "%"
-        document.getElementById("p1").style.maxWidth = 25 + "%"
-        document.getElementById("p1").style.bottom = 45 + "px"
     }, 1200)
  
     //Fazendo o papas andar e desaparecer

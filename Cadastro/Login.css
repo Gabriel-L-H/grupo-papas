@@ -155,6 +155,27 @@ img[src="imgs-cadastro/papas.png"]{
 #cadastro .linha2 input{
     width: 25%;
 }
+.linha3{
+    position: relative;
+    top: 70px;
+}
+#cadastro .linha3 label{
+    position: relative;
+    left: 19%;
+    bottom: -8px;
+}
+#cadastro .linha3 input{
+    width: 25%;
+}
+.linha4{
+    position: relative;
+    top: 106px;
+}
+#cadastro .linha4 label{
+    position: relative;
+    left: -22%;
+    bottom: -8px;
+}
 p:last-child{
     display: none;
 }
