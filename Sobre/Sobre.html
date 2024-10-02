@@ -8,120 +8,139 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sobre nós|Papa's Pizzaria</title>
     <link rel="stylesheet" href="css-certo.css">
-    <script src="interactive.js"></script>
 </head>
 
 <body>
     <header>
-        <nav>
-            <a class="logo1" href="#">Papa's Pizzaria</a>
-            <div class="mobile-menu">
-                <div class="line1"></div>
-                <div class="line2"></div>
-                <div class="line3"></div>
+        <nav class="botãobar">
+
+            <img class="logo1" src="../codes-sobre/imgs/elipse.png" alt="">
+
+            <div id="button1">
+                <div>
+                    <button onclick="openalert()" id="btn1">conta</button>
+                </div>
             </div>
-            <ul class="nav-list">
-                <li><a href="../pizzas/produtos.html">Cardápio</a></li>
-                <li><a href="../Cadastro/Login.html">Conta</a></li>
-                <li><a href="#">Sobre</a></li>
-                <li><a href="#">Suporte</a></li>
-                <li><a href="#">Lojas</a></li>
-                <li><a href="../Check-out/compra.html">Check-out</a></li>
-            </ul>
+            
+        </nav>
+
+        <nav class="navbar">
+            <a class="copacabana1" href="#">cardápio</a>
+            <a class="bar">|</a>
+            <a class="copacabana2" href="#">sobre</a>
+            <a class="bar">|</a>
+            <a class="copacabana3" href="#">contatos</a>
+            <a class="bar">|</a>
+            <a class="copacabana4" href="#">lojas</a>
         </nav>
     </header>
 
     <main class="container">
+        <section class="chocolate">
+            <div class="image-container">
+                <img id="img" src="imgs/papasbaner.png" alt="Imagem">
+            </div>
+        </section>
 
-        <div class="image-container">
-            <img id="img" src="imgs/papasbaner.png" alt="Imagem">
-        </div>
-
-        <h1 id="sobre">Uma fatia da nossa história </h1>
-        <hr id="hrsobre">
+        <section class="chocolate">
+            <h1 id="sobre">Uma fatia da nossa história </h1>
+            <hr id="hrsobre">
+        </section>
 
         <section class="paragrafos">
 
-            <div id="part1">
-                <img id="img1" src="imgs/image0_0.png" alt="">
-                <p class="text1">
-                    Papa's Pizzaria nasceu do sonho de um homem simples, <br>
-                    conhecido na vizinhança como "Papa". Após uma vida dedicada <br>
-                    ao trabalho duro como pedreiro, Papa decidiu que era hora de mudar. <br>
-                    Ele sempre teve uma paixão por cozinhar para sua família e amigos, <br>
-                    e suas pizzas caseiras eram lendárias entre os que as provaram.<br>
-                </p>
-                <hr>
-            </div>
-
-            <div id="part2">
-
-                <img id="img2" src="imgs/pizzaria.png" alt="">
-
-                <p class="text2">
-                    Em 1998, depois de poupar dinheiro durante anos <br>
-                    e enfrentar muitos desafios,Papa abriu as portas <br>
-                    de sua pequena pizzaria em uma esquina tranquila da cidade. <br>
-                    O início foi difícil, com poucos recursos e muitos obstáculos. <br>
-                    Papa trabalhou incansavelmente, muitas vezes até tarde da noite, <br>
-                    amassando massa e preparando molhos com as receitas que ele <br>
-                    desenvolveu ao longo dos anos<br>
-                </p>
-                <hr>
-            </div>
-
-            <div id="part3"></div>
-
-            <img id="img3" src="imgs/ingredientes.png" alt="">
-
-            <p class="text3">
-                O que começou como uma pequena pizzaria de bairro logo se tornou <br>
-                o coração da comunidade. Papa fazia questão de conhecer cada cliente<br>
-                pelo nome, e seu calor humano fazia com que todos se sentissem em casa.<br>
-                Cada pizza era feita com amor, utilizando apenas os melhores ingredientes.<br>
-                A fama de Papa's Pizzaria se espalhou, e o que antes era um pequeno negócio<br>
-                se transformou em um símbolo de perseverança e paixão.<br>
-            </p>
-            <hr>
-            </div>
-
-            <div id="part4">
-
-                <img id="img4" src="imgs/sofia.png" alt="">
-            </div>
-            <p class="text4">
-                Em 2015, Papa foi diagnosticado com uma doença grave <br>
-                que o obrigou a se afastar do forno. Mas sua dedicação e amor <br>
-                pela pizzaria nunca diminuíram. Ele passou o bastão para sua filha,<br>
-                Sofia, que cresceu ao lado do pai na pizzaria e herdou sua paixão <br>
-                por cozinhar. Sofia prometeu continuar o legado do pai, <br>
-                e sob sua liderança, Papa's Pizzaria continua a crescer <br>
-                e a espalhar alegria com suas pizzas inigualáveis.<br>
-            </p>
-            <hr>
-            </div>
-
-            <div id="part5">
-
-                <img id="img5" src="imgs/funcionarios.png" alt="">
-
-
-                <p class="text5">
-                    Papa's Pizzaria não é apenas um lugar para comer, <br>
-                    é uma casa longe de casa, onde cada cliente é tratado como família. <br>
-                    Nossa missão é continuar a honrar o legado de Papa, <br>
-                    trazendo amor e sabor a cada pizza que fazemos. <br>
-                    Obrigado por fazer parte da nossa história!<br>
-                </p>
-                <hr><br>
-            </div>
-
-            <div id="button">
-                <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-                <div>
-                    <button onclick="abriralerta()" id="btn">-avalie-nos!!-</button>
+            <section class="chocolate">
+                <div id="part1">
+                    <img id="img1" src="imgs/image0_0.png" alt="">
+                    <p class="text1">
+                        Papa's Pizzaria nasceu do sonho de um homem simples, <br>
+                        conhecido na vizinhança como "Papa". Após uma vida dedicada <br>
+                        ao trabalho duro como pedreiro, Papa decidiu que era hora de mudar. <br>
+                        Ele sempre teve uma paixão por cozinhar para sua família e amigos, <br>
+                        e suas pizzas caseiras eram lendárias entre os que as provaram.<br>
+                    </p>
+                    <hr>
                 </div>
-            </div>
+            </section>
+
+            <section class="chocolate">
+                <div id="part2">
+
+                    <img id="img2" src="imgs/pizzaria.png" alt="">
+
+                    <p class="text2">
+                        Em 1998, depois de poupar dinheiro durante anos <br>
+                        e enfrentar muitos desafios,Papa abriu as portas <br>
+                        de sua pequena pizzaria em uma esquina tranquila da cidade. <br>
+                        O início foi difícil, com poucos recursos e muitos obstáculos. <br>
+                        Papa trabalhou incansavelmente, muitas vezes até tarde da noite, <br>
+                        amassando massa e preparando molhos com as receitas que ele <br>
+                        desenvolveu ao longo dos anos<br>
+                    </p>
+                    <hr>
+                </div>
+            </section>
+
+            <section class="chocolate">
+                <div id="part3"></div>
+
+                <img id="img3" src="imgs/ingredientes.png" alt="">
+
+                <p class="text3">
+                    O que começou como uma pequena pizzaria de bairro logo se tornou <br>
+                    o coração da comunidade. Papa fazia questão de conhecer cada cliente<br>
+                    pelo nome, e seu calor humano fazia com que todos se sentissem em casa.<br>
+                    Cada pizza era feita com amor, utilizando apenas os melhores ingredientes.<br>
+                    A fama de Papa's Pizzaria se espalhou, e o que antes era um pequeno negócio<br>
+                    se transformou em um símbolo de perseverança e paixão.<br>
+                </p>
+                <hr>
+                </div>
+            </section>
+
+            <section class="chocolate">
+                <div id="part4">
+
+                    <img id="img4" src="imgs/sofia.png" alt="">
+                </div>
+                <p class="text4">
+                    Em 2015, Papa foi diagnosticado com uma doença grave <br>
+                    que o obrigou a se afastar do forno. Mas sua dedicação e amor <br>
+                    pela pizzaria nunca diminuíram. Ele passou o bastão para sua filha,<br>
+                    Sofia, que cresceu ao lado do pai na pizzaria e herdou sua paixão <br>
+                    por cozinhar. Sofia prometeu continuar o legado do pai, <br>
+                    e sob sua liderança, Papa's Pizzaria continua a crescer <br>
+                    e a espalhar alegria com suas pizzas inigualáveis.<br>
+                </p>
+                <hr>
+                </div>
+            </section>
+
+            <section class="chocolate">
+                <div id="part5">
+
+                    <img id="img5" src="imgs/funcionarios.png" alt="">
+
+
+                    <p class="text5">
+                        Papa's Pizzaria não é apenas um lugar para comer, <br>
+                        é uma casa longe de casa, onde cada cliente é tratado como família. <br>
+                        Nossa missão é continuar a honrar o legado de Papa, <br>
+                        trazendo amor e sabor a cada pizza que fazemos. <br>
+                        Obrigado por fazer parte da nossa história!<br>
+                    </p>
+                    <hr><br>
+                </div>
+            </section>
+
+            <section class="chocolate">
+                <div id="button">
+                    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+                    <div>
+                        <button onclick="abriralerta()" id="btn">-avalie-nos!!-</button>
+                    </div>
+                </div>
+            </section>
 
 
 
@@ -129,53 +148,54 @@
 
 
 
+        <section class="chocolate">
+            <h1 id="txtdif">Nossos diferenciais</h1>
 
-        <h1 id="txtdif">Nossos diferenciais</h1>
 
-        <section id="sec-dif">
-            <div class="pizzaimg">
-                <img src="imgs/Leonardo_Phoenix_A_delicious_mouthwatering_pizza_sliced_in_hal_1-removebg-preview_LE_auto_x2-removebg-preview.png"
-                    alt="">
-            </div>
-            <div class="diftext1">
-                <h1>🍅 Ingredientes frescos</h1>
-                Ingredientes de nossa própria horta e carnes sempre compradas no dia.
-            </div>
+            <section id="sec-dif">
+                <div class="pizzaimg">
+                    <img src="imgs/Leonardo_Phoenix_A_delicious_mouthwatering_pizza_sliced_in_hal_1-removebg-preview_LE_auto_x2-removebg-preview.png"
+                        alt="">
+                </div>
+                <div class="diftext1">
+                    <h1>🍅 Ingredientes frescos</h1>
+                    Ingredientes de nossa própria horta e carnes sempre compradas no dia.
+                </div>
 
-            <div class="diftext2">
-                <h1>🍕Massas</h1>
-                Nossas massas são saborosas, finas e crocantes!
-            </div>
+                <div class="diftext2">
+                    <h1>🍕Massas</h1>
+                    Nossas massas são saborosas, finas e crocantes!
+                </div>
 
-            <div class="diftext3">
-                <h1>⏳Rapidez</h1>
-                agilidade no preparo para você não esperar!
-            </div>
+                <div class="diftext3">
+                    <h1>⏳Rapidez</h1>
+                    agilidade no preparo para você não esperar!
+                </div>
 
-            <div class="diftext4">
-                <h1>📞Atendimento</h1>
-                Atendimento humanizado e carismatico com todos.
-            </div>
+                <div class="diftext4">
+                    <h1>📞Atendimento</h1>
+                    Atendimento humanizado e carismatico com todos.
+                </div>
 
-            <div class="diftext5">
-                <h1>🕊️Tradição</h1>
-                Prezamos pelas tradicionais pizzas italianas mantendo a tradição.
-            </div>
+                <div class="diftext5">
+                    <h1>🕊️Tradição</h1>
+                    Prezamos pelas tradicionais pizzas italianas mantendo a tradição.
+                </div>
 
-            <div class="diftext6">
-                <h1>✏️Personalização</h1>
-                você pode personalizar suas pizzas do seu jeito!
-            </div>
-            <div class="diftext7">
-                <h1>👨‍👩‍👧‍👦Ambiente fámilia</h1>
-                ambiente climatizado e calmo para o seu conforto e o da sua familia.
-            </div>
-            <div class="diftext8">
-                <h1>🏍️Entrega</h1>
-                Nós entregamos nossas delicias para você comer no conforto do seu lar!
-            </div>
-            
-            
+                <div class="diftext6">
+                    <h1>✏️Personalização</h1>
+                    você pode personalizar suas pizzas do seu jeito!
+                </div>
+                <div class="diftext7">
+                    <h1>👨‍👩‍👧‍👦Ambiente fámilia</h1>
+                    ambiente climatizado e calmo para o seu conforto e o da sua familia.
+                </div>
+                <div class="diftext8">
+                    <h1>🏍️Entrega</h1>
+                    Nós entregamos nossas delicias para você comer no conforto do seu lar!
+                </div>
+            </section>
+
         </section>
     </main>
     <footer>
@@ -186,5 +206,6 @@
 
     </footer>
 </body>
+<script src="interactive.js" defer></script>
 
 </html>
