@@ -68,7 +68,7 @@ const animLabel = function (a) {
         clearInterval(id)
         var id = setInterval(frame0, 3)
         function frame0(){
-            if (p == 45){
+            if (p == 35){
                 clearInterval(id)
             }
         
@@ -79,12 +79,28 @@ const animLabel = function (a) {
         }
         }
 
+    else if(a === 0 || a === 1 || a === 2){
+        var p = 0
+        clearInterval(id)
+        var id = setInterval(frame0, 3)
+        function frame0(){
+            if (p == 25){
+                clearInterval(id)
+            }
+        
+            else{
+                p++
+                labels[a].style.bottom = p + "px"
+            }
+        }
+    }
+
     else{
         var p = 0
         clearInterval(id)
         var id = setInterval(frame0, 3)
         function frame0(){
-            if (p == 30){
+            if (p == 15){
                 clearInterval(id)
             }
         
@@ -130,7 +146,7 @@ const animLabelCancel = function (b){
             }
         }
 
-        else if(b === 3 || b === 4){
+        else if(b === 3 || b === 4 || b === 5 || b === 6 || b === 7){
             var id2 = setInterval(frame2, 3)
             function frame2() {
                 if (p <= -8) {
