@@ -63,6 +63,7 @@ const animLabel = function (a) {
     else{
     labels[a].style.color = "blue";
 
+    var p = labels[a].style.top
     if (a === 2){
         var p = 15
         clearInterval(id)
@@ -79,8 +80,8 @@ const animLabel = function (a) {
         }
         }
 
-    else if(a === 0 || a === 1 || a === 2){
-        var p = 0
+    else if(a === 0 || a === 1){
+        var p = labels[a].style.top
         clearInterval(id)
         var id = setInterval(frame0, 3)
         function frame0(){
@@ -96,7 +97,6 @@ const animLabel = function (a) {
     }
 
     else{
-        var p = 0
         clearInterval(id)
         var id = setInterval(frame0, 3)
         function frame0(){
@@ -147,7 +147,8 @@ const animLabelCancel = function (b){
         }
 
         else if(b === 3 || b === 4 || b === 5 || b === 6 || b === 7){
-            var id2 = setInterval(frame2, 3)
+            var p = labels[b].style.top
+            var id2 = setInterval(frame2, 1)
             function frame2() {
                 if (p <= -8) {
                     clearInterval(id2)
@@ -164,7 +165,6 @@ const animLabelCancel = function (b){
     //se estiver preenchido, fica onde está//
         else{
             labels[b].style.color = "blue"
-            labels[b].style.bottom = 30 + "px"
         }
 }
 
@@ -407,3 +407,22 @@ form1.addEventListener("click", animForm)
 
 var form0 = document.getElementById("entre");
 form0.addEventListener("click", animFormLogin)
+
+var BuscarCep = function(){
+var Cep = document.getElementById("cep").value
+fetch("https://viacep.com.br/ws/"+Cep+"/json/")
+.then(response =>{
+    return response.json()
+})
+.then(data =>{
+    console.log(data)
+    document.getElementById("bairro").value = data.bairro
+    document.getElementById("rua").value = data.logradouro
+})
+.catch(err =>{
+    console.log(err)
+    alert("Digite um cep válido")
+})
+}
+
+document.getElementById("cep").addEventListener("change", BuscarCep)
