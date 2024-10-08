@@ -418,6 +418,11 @@ fetch("https://viacep.com.br/ws/"+Cep+"/json/")
     console.log(data)
     document.getElementById("bairro").value = data.bairro
     document.getElementById("rua").value = data.logradouro
+
+    document.getElementById("text-rua").style.color = "blue"
+    document.getElementById("text-rua").style.bottom = 15 + "px"
+    document.getElementById("text-bairro").style.color = "blue"
+    document.getElementById("text-bairro").style.bottom = 15 + "px"
 })
 .catch(err =>{
     console.log(err)
@@ -426,3 +431,8 @@ fetch("https://viacep.com.br/ws/"+Cep+"/json/")
 }
 
 document.getElementById("cep").addEventListener("change", BuscarCep)
+
+document.getElementById("login").addEventListener("submit", function(){
+    let nome = document.getElementById("nome").value
+    sessionStorage.setItem("nome", nome)
+})

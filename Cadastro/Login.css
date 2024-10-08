@@ -184,3 +184,9 @@ p:last-child{
     text-decoration: underline;
     color: rgb(31, 96, 236);
 }
+
+@media screen and (min-width: 1400px) {
+    form img{
+        left: 325px;
+    }
+}
