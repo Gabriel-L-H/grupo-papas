@@ -57,7 +57,7 @@ var labels = document.querySelectorAll("label")
 var inputs = document.querySelectorAll("input")
 
 const animLabel = function (a) {
-    if (inputs[a].value != ""){
+    if (inputs[a].value.trim() != ""){
         return
     }
     else{
@@ -407,6 +407,13 @@ form1.addEventListener("click", animForm)
 
 var form0 = document.getElementById("entre");
 form0.addEventListener("click", animFormLogin)
+
+var formulario = document.getElementById("login")
+formulario.addEventListener("submit", (event) => {
+    event.preventDefault()
+    formulario.submit()
+    setTimeout(() => {formulario.reset()}, 2)
+})
 
 var BuscarCep = function(){
 var Cep = document.getElementById("cep").value
