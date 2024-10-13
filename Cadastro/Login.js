@@ -230,6 +230,15 @@ elementTel.addEventListener("keypress", function(f){
  
 //animação ao clicar em cadastrar-se//
 function animForm(){
+
+    document.querySelector("form").id = "FormCadastro"
+
+    //Deixa todos inputs obrigatórios//
+    for (let i = 0; i < document.querySelectorAll("input").length; i++) {
+        const inputs = document.querySelectorAll("input")
+        inputs[i].required = true
+    }
+
     //animando o retângulo vermelho
     var retanguloRed = document.querySelectorAll("div");
  
@@ -302,7 +311,7 @@ function animForm(){
     }
  
     //animando o form como um todo//
-    var forms = document.getElementById("login")
+    var forms = document.getElementById("FormCadastro")
     var a = 90
     var id8 = setInterval(frame2, 1)
  
@@ -331,6 +340,15 @@ function animForm(){
 }
  
 function animFormLogin(){
+
+        document.querySelector("form").id = "FormLogin"
+
+        //Deixa só os inputs email e senha obrigatórios//
+        for (let i = 2; i < document.querySelectorAll("input").length; i++) {
+            const inputs = document.querySelectorAll("input")
+            inputs[i].required = false
+        }
+
         //animando o retângulo vermelho para voltar ao tamanho anterior//
         var retanguloRed = document.querySelectorAll("div");
      
@@ -379,7 +397,7 @@ function animFormLogin(){
         var id11 = setInterval(frame1, 1)
         a = -50
         function frame1(){
-            var forms = document.getElementById("login")
+            var forms = document.getElementById("FormLogin")
             if (a == 44){
                 clearInterval(id11)
             }
@@ -408,12 +426,7 @@ form1.addEventListener("click", animForm)
 var form0 = document.getElementById("entre");
 form0.addEventListener("click", animFormLogin)
 
-var formulario = document.getElementById("login")
-formulario.addEventListener("submit", (event) => {
-    event.preventDefault()
-    formulario.submit()
-    setTimeout(() => {formulario.reset()}, 2)
-})
+//Uso das APIs//
 
 var BuscarCep = function(){
 var Cep = document.getElementById("cep").value
@@ -439,7 +452,26 @@ fetch("https://viacep.com.br/ws/"+Cep+"/json/")
 
 document.getElementById("cep").addEventListener("change", BuscarCep)
 
-document.getElementById("login").addEventListener("submit", function(){
-    let nome = document.getElementById("nome").value
-    sessionStorage.setItem("nome", nome)
+document.querySelector("form").addEventListener("submit", (event) => {
+    event.preventDefault()
+    let ValorEmail = document.getElementById("email").value 
+    let form = event.target
+
+    if(form.id == "FormCadastro"){
+        sessionStorage.setItem("email", ValorEmail)
+        form.submit()
+        setTimeout(() => {form.reset()}, 2)
+    }
+
+    else if(form.id == "FormLogin"){
+            if(ValorEmail != sessionStorage.getItem("email")){
+                alert("Calma ae, paezao. Tem algo errado aqui")
+            }
+
+            else if(ValorEmail == sessionStorage.getItem("email")){
+                alert("Tá liberado")
+                form.submit()
+                setTimeout(() => {form.reset()}, 2)
+            }
+        }
 })
