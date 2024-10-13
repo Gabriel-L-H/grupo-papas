@@ -4,34 +4,41 @@ console.log("Altura atual: "+screen.height)
 
 //alert ao carregar a página inteira e ocorre a aparição e animação de um pop-up logo após//
 window.onload = function (){
-    alert("Bem vindo, essa é a página de Login e Cadastro👍")
-        var p = 0
-        clearInterval(id)
-        var id = setInterval(frame, 3)
-        function frame(){
-            if (p == 40){
-                clearInterval(id)
-            }
-            
-            else{
-                p++
-                document.getElementById("pop-up").style.top = p + "%"
+    if(sessionStorage.getItem("PopUp") == "Aceito" || sessionStorage.getItem("PopUp") == "Não Aceito"){
+        return
+    }
+    else{
+        alert("Bem vindo, essa é a página de Login e Cadastro👍")
+            var p = 0
+            clearInterval(id)
+            var id = setInterval(frame, 3)
+            function frame(){
+                if (p == 60){
+                    clearInterval(id)
+                }
+
+                else{
+                    p++
+                    document.getElementById("pop-up").style.top = p + "%"
+                }
             }
         }
-}
+    }   
 
 //o que ocorre após apertar um dos botões do pop-up, mas antes os transformo num """array"""//
 var buttons = document.querySelectorAll("button")
 
 //ao clicar em saiba mais, leva a página sobre e faz o pop-up sumir//
 buttons[1].addEventListener("click", function(){
+    sessionStorage.setItem("PopUp", "Aceito")
     window.open ('../Pagina-pedidos/pedidos.html', 'pagina', "width=650 height=500")
     document.getElementById("pop-up").style.display = "none"
 })
 
 //ao clicar em talvez mais tarde, faz uma animação para o pop-up sumir indo para baixo//
 buttons[2].addEventListener("click", function(){
-    p = 40
+    sessionStorage.setItem("PopUp", "Não Aceito")
+    p = 60
     clearInterval(id1)
     var id1 = setInterval(frame1, 1)
     function frame1 (){
@@ -454,22 +461,46 @@ document.getElementById("cep").addEventListener("change", BuscarCep)
 
 document.querySelector("form").addEventListener("submit", (event) => {
     event.preventDefault()
+
     let ValorEmail = document.getElementById("email").value 
+    let ValorSenha = document.getElementById("senha").value
+    let NameUser = document.getElementById("nome").value
+    let CpfUser = document.getElementById("cpf").value
+    let EmailUser = document.getElementById("email").value
+    let TelefoneUser = document.getElementById("tel").value
+    let SenhaUser = document.getElementById("senha").value
+    let CepUser = document.getElementById("cep").value
+    let RuaUser = document.getElementById("rua").value
+    let BairroUser = document.getElementById("bairro").value
     let form = event.target
 
+    function Pessoa(name, cpf, email, telefone, senha, cep, rua, bairro){
+        this.nome = name;
+        this.cpf = cpf;
+        this.email = email;
+        this.telefone = telefone;
+        this.senha = senha;
+        this.cep = cep;
+        this.rua = rua;
+        this.bairro = bairro;
+    }
+    const Pessoa1 = new Pessoa(NameUser, CpfUser, EmailUser, TelefoneUser, SenhaUser, CepUser, RuaUser, BairroUser)
+
     if(form.id == "FormCadastro"){
-        sessionStorage.setItem("email", ValorEmail)
+        sessionStorage.setItem("Usuário", JSON.stringify(Pessoa1))
         form.submit()
         setTimeout(() => {form.reset()}, 2)
     }
 
     else if(form.id == "FormLogin"){
-            if(ValorEmail != sessionStorage.getItem("email")){
-                alert("Calma ae, paezao. Tem algo errado aqui")
+            let ObjetoJsonUser = sessionStorage.getItem("Usuário")
+            let ObjetoUser = JSON.parse(ObjetoJsonUser)
+            if(ValorEmail != ObjetoUser.email || ValorSenha != ObjetoUser.senha){
+                alert("Email ou senha incorretos, tente novamente.")
             }
 
-            else if(ValorEmail == sessionStorage.getItem("email")){
-                alert("Tá liberado")
+            else if(ValorEmail == ObjetoUser.email && ValorSenha == ObjetoUser.senha){
+                alert("Bem vindo: "+ObjetoUser.nome)
                 form.submit()
                 setTimeout(() => {form.reset()}, 2)
             }
