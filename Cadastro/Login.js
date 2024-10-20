@@ -439,12 +439,21 @@ form0.addEventListener("click", animFormLogin)
 
 //Uso das APIs//
 
+//***     API de Armazenamento     ***//
+//fuction para requisição de cep//
 var BuscarCep = function () {
     var Cep = document.getElementById("cep").value
+
+    //uso o fetch (trabalha com promises) para requisição da url e na url coloco o cep digitado//
     fetch("https://viacep.com.br/ws/" + Cep + "/json/")
+
+    //se a promise der certo e retornar, estará retornando um objeto, do qual o transformo em objeto json//
+    //json: uma forma de estruturar os dados, semelhante a um objeto, trabalha com propriedades//
         .then(response => {
             return response.json()
         })
+
+    //pego o objeto json que foi retornado e insiro certas propriedades dele em alguns campos//
         .then(data => {
             console.log(data)
             document.getElementById("bairro").value = data.bairro
@@ -455,17 +464,23 @@ var BuscarCep = function () {
             document.getElementById("text-bairro").style.color = "blue"
             document.getElementById("text-bairro").style.bottom = 15 + "px"
         })
+
+    //caso a promise der algum erro, supondo que a culpa seja do usuário mando um alert falando para digitar o cep válido//
         .catch(err => {
             console.log(err)
             alert("Digite um cep válido")
         })
 }
 
+//chamo a função BuscarCep sempre que o campo cep mudar//
 document.getElementById("cep").addEventListener("change", BuscarCep)
 
+//seleciono o formulario e adiciono um evento sempre que ele disparar submit//
 document.querySelector("form").addEventListener("submit", (event) => {
+    //cancelo o submit de imediato//
     event.preventDefault()
 
+    //tranformo todos valores dos inputs do formulario em variaveis//
     let ValorEmail = document.getElementById("email").value
     let ValorSenha = document.getElementById("senha").value
     let NameUser = document.getElementById("nome").value
@@ -476,8 +491,11 @@ document.querySelector("form").addEventListener("submit", (event) => {
     let CepUser = document.getElementById("cep").value
     let RuaUser = document.getElementById("rua").value
     let BairroUser = document.getElementById("bairro").value
+
+    //transformo o formulario que está disparando o evento submit em variavel//
     let form = event.target
 
+    //crio uma função construtora para objetos Pessoa//
     function Pessoa(name, cpf, email, telefone, senha, cep, rua, bairro) {
         this.nome = name;
         this.cpf = cpf;
@@ -488,16 +506,28 @@ document.querySelector("form").addEventListener("submit", (event) => {
         this.rua = rua;
         this.bairro = bairro;
     }
+    
+    //crio um objeto Pessoa1 que chama a função Pessoa para fazer um objeto. Adiciono nele os valores dos campos do formulario//
     const Pessoa1 = new Pessoa(NameUser, CpfUser, EmailUser, TelefoneUser, SenhaUser, CepUser, RuaUser, BairroUser)
 
+    //se o id do form for FormCadastro, adiciono no armazenamento da sessão//
+
     if (form.id == "FormCadastro") {
+
+        //adiciono chave Usuário e o valor é o objeto Pessoa1 transformado em objeto json//
         sessionStorage.setItem("Usuário", JSON.stringify(Pessoa1))
+
+        //logo após aplico submit ao formulário e depois de um tempo reseto ele//
         form.submit()
         setTimeout(() => { form.reset() }, 2)
     }
 
+    //se o id do form for FormLogin, faço uma verificação do email e senha//
     else if (form.id == "FormLogin") {
+
+        //pego o valor da chave usuário, que no caso seriam os dados do objeto json da Pessoa1//
         let ObjetoJsonUser = sessionStorage.getItem("Usuário")
+        
         let ObjetoUser = JSON.parse(ObjetoJsonUser)
         if (ValorEmail != ObjetoUser.email || ValorSenha != ObjetoUser.senha) {
             alert("Email ou senha incorretos, tente novamente.")
