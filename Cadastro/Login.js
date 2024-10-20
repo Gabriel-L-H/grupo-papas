@@ -447,7 +447,7 @@ var BuscarCep = function () {
     //uso o fetch (trabalha com promises) para requisição da url e na url coloco o cep digitado//
     fetch("https://viacep.com.br/ws/" + Cep + "/json/")
 
-    //se a promise der certo e retornar, estará retornando uma string, do qual a transformo em objeto js//
+    //se a promise der certo e retornar, estará retornando uma string json, do qual a transformo em objeto js//
     //json: uma forma de estruturar os dados, semelhante a um objeto, trabalha com propriedades//
         .then(response => {
             return response.json()
