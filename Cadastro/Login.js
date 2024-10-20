@@ -447,13 +447,13 @@ var BuscarCep = function () {
     //uso o fetch (trabalha com promises) para requisição da url e na url coloco o cep digitado//
     fetch("https://viacep.com.br/ws/" + Cep + "/json/")
 
-    //se a promise der certo e retornar, estará retornando um objeto, do qual o transformo em objeto json//
+    //se a promise der certo e retornar, estará retornando uma string, do qual a transformo em objeto js//
     //json: uma forma de estruturar os dados, semelhante a um objeto, trabalha com propriedades//
         .then(response => {
             return response.json()
         })
 
-    //pego o objeto json que foi retornado e insiro certas propriedades dele em alguns campos//
+    //pego o objeto que foi retornado e insiro certas propriedades dele em alguns campos//
         .then(data => {
             console.log(data)
             document.getElementById("bairro").value = data.bairro
@@ -514,7 +514,7 @@ document.querySelector("form").addEventListener("submit", (event) => {
 
     if (form.id == "FormCadastro") {
 
-        //adiciono chave Usuário e o valor é o objeto Pessoa1 transformado em objeto json//
+        //adiciono uma chave Usuário e o valor dela é o objeto JS Pessoa1 transformado em string json//
         sessionStorage.setItem("Usuário", JSON.stringify(Pessoa1))
 
         //logo após aplico submit ao formulário e depois de um tempo reseto ele//
@@ -525,16 +525,22 @@ document.querySelector("form").addEventListener("submit", (event) => {
     //se o id do form for FormLogin, faço uma verificação do email e senha//
     else if (form.id == "FormLogin") {
 
-        //pego o valor da chave usuário, que no caso seriam os dados do objeto json da Pessoa1//
+        //pego o valor da chave usuário, que no caso seriam os dados da string JSON da Pessoa1//
         let ObjetoJsonUser = sessionStorage.getItem("Usuário")
         
+        //transformo o objeto json em objeto js novamente para melhor manipulação//
         let ObjetoUser = JSON.parse(ObjetoJsonUser)
+
+        //verifico se os valores dos campos email e senha correspondem aos cadastrados//
         if (ValorEmail != ObjetoUser.email || ValorSenha != ObjetoUser.senha) {
             alert("Email ou senha incorretos, tente novamente.")
         }
 
+        //se os valores dos campos de mail e senha estiverem certo, mando um alerta de bem vindo//
         else if (ValorEmail == ObjetoUser.email && ValorSenha == ObjetoUser.senha) {
             alert("Bem vindo: " + ObjetoUser.nome)
+
+            //logo após aplico submit ao formulário e depois de um tempo reseto ele//
             form.submit()
             setTimeout(() => { form.reset() }, 2)
         }
