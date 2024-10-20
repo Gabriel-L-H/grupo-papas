@@ -528,7 +528,7 @@ document.querySelector("form").addEventListener("submit", (event) => {
         //pego o valor da chave usuário, que no caso seriam os dados da string JSON da Pessoa1//
         let ObjetoJsonUser = sessionStorage.getItem("Usuário")
         
-        //transformo o objeto json em objeto js novamente para melhor manipulação//
+        //transformo a string json em objeto js novamente para melhor manipulação//
         let ObjetoUser = JSON.parse(ObjetoJsonUser)
 
         //verifico se os valores dos campos email e senha correspondem aos cadastrados//
