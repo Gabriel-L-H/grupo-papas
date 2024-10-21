@@ -1,117 +1,56 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Página inicial | Home</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" type="text/css" href="cookies/cookies.css" />
-  <link rel="shortcut icon" href="imagens/logo-favicon-removebg-preview.png" type="image/x-icon">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-    rel="stylesheet">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Login.css">
+    <script defer type="text/javascript" src="Login.js"></script>
+    <title>Login e Cadastro</title>
 </head>
-
 <body>
+    <div class="container">
 
-  <body>
-
-    <div id="darkOverlay"></div>
-
-    <section id="pop-up">
-      <img src="imagens/gametiles_air.com.flipline.papalouiepals-removebg-preview.png" alt="">
-      <h2>Seja bem-vindo a Papa's Pizzaria <br>
-        !!!
-      </h2>
-      <button id="closeBtn">Fechar</button>
-    </section>
-    <header>
-      <nav>
-        <a class="logo" href="#">Papas Pizzaria</a>
-        <div class="mobile-menu">
-          <div class="line1"></div>
-          <div class="line2"></div>
-          <div class="line3"></div>
-        </div>
-        <ul class="nav-list">
-          <li><a href="../Pagina-pedidos/pedidos.html">Cardápio</a></li>
-          <li><a href="../Cadastro/Login.html">Conta</a></li>
-          <li><a href="#">Sobre</a></li>
-          <li><a href="#">Suporte</a></li>
-          <li><a href="#">Lojas</a></li>
-          <li><a href="../Check-out/compra.html">Check-out</a></li>
-        </ul>
-      </nav>
-    </header>
-    <main>
-      <section class="carrossel">
-        <div class="container" id="img">
-          <img src="imagens/bunner1.png" alt="">
-          <img src="imagens/Bunner2.png" alt="">
-          <img src="imagens/Bunner3.png" alt="">
-        </div>
-      </section>
-
-
-      <section class="opcoes">
-        <img src="imagens/cardapio-removebg-preview.png" alt="" width="450px" height="150px">
-        <img src="imagens/menu-promoções-removebg-preview.png" alt="" width="450px" height="150px">
-      </section>
-      <section class="mais-pedidas">
-        <h1>
-          As mais pedidas
-        </h1>
-        <div class="pizzas">
-          <figure>
-            <img src="imagens/pizza-mussarela.png" alt="">
-            <figcaption>Mussarela</figcaption>
-          </figure>
-          <figure>
-            <img src="imagens/pizza-calabresa.png" alt="">
-            <figcaption>Calabresa</figcaption>
-          </figure>
-          <figure>
-            <img src="imagens/pizza-portuguesa.png" alt="">
-            <figcaption>Portuguesa</figcaption>
-          </figure>
-          <figure>
-            <img src="imagens/pizza-marguerita.png" alt="">
-            <figcaption>Marguerita</figcaption>
-          </figure>
-          <figure>
-            <img src="imagens/pizza-frango.png" alt="">
-            <figcaption>Frango com Catupiry</figcaption>
-          </figure>
-        </div>
-      </section>
-    </main>
-    <script src="interactive.js"></script>
-    <footer>
-      <img src="imagens/logo-paginas-removebg-preview.png" alt="">
-    </footer>
-    <div id="cookies1" class="cookies1">
-      <div id="textocookies">
-        <p>
-          Para proporcionar
-          uma experiência de navegação mais
-          eficiente e personalizada,
-          nosso site utiliza cookies.
-        </p>
-        <div id="maistexto" onclick="lermais()">Saiba mais</div>
-      </div>
-      <div id="botaocookies">
-        <button onclick="aceito()">Aceito</button>
-      </div>
-
+        <form id="login" action="arquivo.php" method="post">
+           
+            <h1>Login</h1>
+ 
+            <div class="block">
+                <input type="email" id="email" required>
+                <label for="email" id="text-email">Email</label>
+                <img src="imgs-cadastro/email.png">
+            </div>
+           
+            <div class="block">
+                <input type="password" id="senha" required>
+                <label for="senha" id="text-senha">Senha</label>
+                <img src="imgs-cadastro/lock.png">
+            </div>
+ 
+            <section id="cadastro">
+                <h1>Bem Vindo</h1>
+                    <input type="text" id="nome">
+                    <label for="nome" id="text-nome">Nome Completo</label>
+               
+                <div class="linha2">
+                    <input type="text" id="cpf" maxlength="14">
+                    <label for="cpf" id="text-cpf">CPF</label>
+ 
+                    <input type="tel" id="tel" maxlength="14">
+                    <label for="tel" id="text-tel">Telefone</label>
+                </div>
+            </section>
+           
+            <button type="submit">ENTRAR</button>
+            <p>Não possui cadastro? <b id="cadastre-se">Cadastre-se</b>😊👍</p>
+            <p>Já possui login? <b id="entre">Entre</b>😊</p>
+        </form>
+        <img id="papas" src="imgs-cadastro/papas.png">
     </div>
-
-<div id="cookies"></div>
-  </body>
-
+    <div id="pop-up">
+        <h1>Olá!</h1>
+        <h2>Quer saber mais sobre nossos produtos? Quer saber mais sobre eles?</h2>
+        <button>Saiba Mais</button>
+        <button>Talvez Mais Tarde</button>
+    </div>
+</body>
 </html>
