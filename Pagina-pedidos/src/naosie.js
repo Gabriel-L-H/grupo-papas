@@ -31,7 +31,7 @@ const finalizarpedido = document.querySelector(".finalizar-pedido")
 // Segunda parte
 
 var telafinalhtml = document.querySelector(".tela-final")
-var overlay = document.getElementById("darkOverlay");
+var overlay = document.getElementById("darkOverlay")
 const voltar = document.querySelector(".voltar")
 var formapagamento = document.querySelectorAll(".botao-forma-pagamento")
 var botaofinal = document.querySelector(".enviar")
@@ -102,22 +102,22 @@ function valortotal() {
 
 
 function voltarCor_mais(event) {
-    event.target.style.backgroundColor = "#00cd00" // Cor original
+    event.target.style.backgroundColor = "#3d5fce" // Cor original
 
 }
 
 function alterarCorAoClicar_mais(event) {
-    event.target.style.backgroundColor = "#009246" // Cor ao clicar
+    event.target.style.backgroundColor = "#263c86" // Cor ao clicar
 }
 // Muda a cor do botão de mais
 
 function voltarCor_menos(event) {
-    event.target.style.backgroundColor = "#ff0000" // Cor original
+    event.target.style.backgroundColor = "#fab828" // Cor original
 
 }
 
 function alterarCorAoClicar_menos(event) {
-    event.target.style.backgroundColor = "#CE2B37" // Cor ao clicar
+    event.target.style.backgroundColor = "#f59827" // Cor ao clicar
 }
 // Muda a cor do botão menos
 
@@ -126,37 +126,40 @@ finalizarpedido.addEventListener("click", telafinal)
 voltar.addEventListener("click", removetelafinal)
 
 function telafinal() {
-    telafinalhtml.style.opacity = "1"; // Torna a tela final visível
-    telafinalhtml.style.zIndex = "999"; // Traz a tela final para a frente
-    telafinalhtml.style.transition = "opacity 1.5s ease, z-index 0.9s ease";
+    telafinalhtml.style.opacity = "1"
+    telafinalhtml.style.zIndex = "999"
+    telafinalhtml.style.transition = "opacity 1.5s ease, z-index 0.9s ease"
 
-    document.body.style.overflow = "hidden"; // Impede o scroll da página
+    document.body.style.overflow = "hidden"
 
-    overlay.style.zIndex = "998"; // Define o overlay atrás da tela final
-    overlay.style.backgroundColor = "rgba(0, 0, 0, 0.7)"; // Aplica um fundo escuro semi-transparente
+    overlay.style.zIndex = "998"
+    overlay.style.backgroundColor = "rgba(0, 0, 0, 0.7)"
     
-        conteinertotal.style.opacity = "0"; // Torna a tela final invisível
+        conteinertotal.style.opacity = "0"
         conteinertotal.style.zIndex = "-1"
-        conteinertotal.style.transition = "opacity 1.5s ease, z-index 1.1s ease";
+        conteinertotal.style.transition = "opacity 1.5s ease, z-index 1.1s ease"
+
+        completarCampos()
 }
 
 function removetelafinal() {
-    telafinalhtml.style.opacity = "0"; // Torna a tela final invisível
-    telafinalhtml.style.zIndex = "-1"; // Define um z-index inferior mas visível para outros elementos
-    telafinalhtml.style.transition = "opacity 1.5s ease, z-index 1.1s ease";
+    telafinalhtml.style.opacity = "0"
+    telafinalhtml.style.zIndex = "-1"
+    telafinalhtml.style.transition = "opacity 1.5s ease, z-index 1.1s ease"
 
-    document.body.style.overflow = "auto"; // Permite o scroll novamente
+    document.body.style.overflow = "auto"
 
-    overlay.style.zIndex = "-1"; // Coloca o overlay atrás de tudo
-    overlay.style.backgroundColor = "rgba(0, 0, 0, 0)"; // Torna o fundo do overlay transparente
+    overlay.style.zIndex = "-1"
+    overlay.style.backgroundColor = "rgba(0, 0, 0, 0)"
 
-    conteinertotal.style.opacity = "1";
+    conteinertotal.style.opacity = "1"
     conteinertotal.style.zIndex = "999"
-    conteinertotal.style.transition = "opacity 1s ease, z-index 1s ease";
+    conteinertotal.style.transition = "opacity 1s ease, z-index 1s ease"
+    
 
 }
 
-formapagamento.forEach((forma, qualforma) => {
+formapagamento.forEach((forma, formaPag) => {
     forma.addEventListener("click", () => {
         var cor = ["#00cf00", "#ffff00", "#02e7ad"]
 
@@ -164,7 +167,7 @@ formapagamento.forEach((forma, qualforma) => {
         formapagamento.forEach(f => f.style.backgroundColor = '')
 
         // Aplicar a cor correspondente ao botão clicado
-        forma.style.backgroundColor = cor[qualforma]
+        forma.style.backgroundColor = cor[formaPag]
 
         // permite apertar o botão final
         botaofinal.addEventListener("click", ativarbotaofinal)
@@ -172,6 +175,21 @@ formapagamento.forEach((forma, qualforma) => {
 })
 
 function ativarbotaofinal() {
-    window.location.assign("Projeto-papa's/pizzas/index.html")
+    window.location.assign("../Página-inicial/index.html")
 }
 
+let slideAtual = 0;
+const totalSlides = document.querySelectorAll('.slide').length
+const slides = document.getElementById('slides')
+
+function completarCampos() {
+    // Usa getItem para recuperar o valor armazenado
+    const endereco = localStorage.getItem("meuendereco")
+
+    // Verifica se o endereço existe antes de preenchê-lo
+    if (endereco) {
+        document.querySelector("#rua").value = endereco
+    } else {
+        console.log("Nenhum endereço salvo")
+    }
+}
