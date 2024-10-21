@@ -546,3 +546,18 @@ document.querySelector("form").addEventListener("submit", (event) => {
         }
     }
 })
+
+document.querySelector("#enviar").addEventListener("click", (prvevenierro) => {
+    
+    prvevenierro.preventDefault()
+
+    var endereco = document.querySelector("#text-rua").value;
+    
+    if (!endereco) {  // Verificar se o valor está vazio
+        alert("Digite algo.");
+    } else {
+        localStorage.setItem("meuendereco", endereco);
+        alert("Endereço salvo com sucesso!");
+    }
+})
+
