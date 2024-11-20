@@ -34,3 +34,14 @@ function mostrarMensagemEnvio() {
     // ESPERAR MAIS TEMPO PARA SUMIR DA TELA.
   }
   
+  const xArray = ["Italy", "France", "Spain", "USA", "Argentina"];
+  const yArray = [55, 49, 44, 24, 15];
+  
+  const layout = {title:"World Wide Wine Production"};
+  
+  const data = [{labels:xArray, values:yArray, type:"pie"}];
+  
+  var graficoFeedback = document.getElementById("grafico-feedback")
+  graficoFeedback.style.width = 800 + "px"
+
+  Plotly.newPlot(graficoFeedback, data, layout);
