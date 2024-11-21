@@ -237,3 +237,9 @@ footer img {
     height: 100px;
   }
 }
+#myPlot{
+  display: flex;
+  justify-content: center;
+  margin-left: 35%;
+  text-align: left;
+}
