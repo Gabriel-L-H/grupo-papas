@@ -161,3 +161,11 @@ if (window.Worker) {
 } else {
   alert("Web Workers não são suportados neste navegador.");//caso web workers n funcionem
 }
+const pizzas = ["Mussarela", "Calabresa", "Portuguesa", "Marguerita", "Frango com catupiry"];
+const porcentagem = [40, 20, 15, 10 , 5];
+
+const titulo = {title:"As mais pedidas"};
+
+const data = [{labels:pizzas, values:porcentagem, type:"pie"}];
+
+Plotly.newPlot("myPlot", data, titulo);
