@@ -240,6 +240,7 @@ footer img {
 #myPlot{
   display: flex;
   justify-content: center;
-  margin-left: 35%;
+  position: relative;
+  left: 27%;
   text-align: left;
 }
