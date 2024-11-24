@@ -33,15 +33,30 @@ function mostrarMensagemEnvio() {
     }, 5500); 
     // ESPERAR MAIS TEMPO PARA SUMIR DA TELA.
   }
-  
+  // FEEDBECKS DOS CLIENTES
   const xArray = ["Italy", "France", "Spain", "USA", "Argentina"];
-  const yArray = [55, 49, 44, 24, 15];
+  const yArray = [25, 89, 44, 24, 15];
   
-  const layout = {title:"World Wide Wine Production"};
+  const layout = {title:"Pontos positivos"};
   
   const data = [{labels:xArray, values:yArray, type:"pie"}];
   
   var graficoFeedback = document.getElementById("grafico-feedback")
-  graficoFeedback.style.width = 800 + "px"
+  graficoFeedback.style.width = 550 + "px"
+  graficoFeedback.style.float = "left"
 
   Plotly.newPlot(graficoFeedback, data, layout);
+
+  //GRÁFICO DE PROBLEMAS DOS CLIENTES
+  const xNomes = ["Intenet lenta", "Site travou", "Pizza demorou", "Histórico sumiu", "Tengo fome"];
+  const yValores = [39, 55, 5, 24, 45];
+  
+  const forma = {title:"Problemas Mais Relatados"};
+  
+  const datacao = [{labels:xNomes, values:yValores, type:"pie"}];
+  
+  var graficoProblema = document.getElementById("grafico-problema")
+  graficoProblema.style.width = 550 + "px"
+  graficoProblema.style.float = "right"
+
+  Plotly.newPlot(graficoProblema, datacao, forma);
