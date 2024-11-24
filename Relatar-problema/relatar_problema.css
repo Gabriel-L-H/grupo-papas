@@ -95,6 +95,14 @@ body {
     font-size: 16px;
     transition: right 0.5s ease-in-out; /* Animação para entrar */
   }
+  #grafico{
+    position: inherit;
+    float:left;
+  }
+  #problemas-diferentes{
+    clear: both;
+  }
+  
   /* Responsividade */
   @media (max-width: 600px) {
     #problemas-diferentes {
@@ -102,4 +110,3 @@ body {
       padding: 10px;
     }
   }
-    
