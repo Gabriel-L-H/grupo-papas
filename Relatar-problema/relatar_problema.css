@@ -99,6 +99,14 @@ body {
     position: inherit;
     float:left;
   }
+  #txt-Problemas{
+    position: relative;
+    left: 35%;
+  }
+  #grafico-dois{
+    position: relative;
+    bottom: 7.5vh;
+  }
   #problemas-diferentes{
     clear: both;
   }
