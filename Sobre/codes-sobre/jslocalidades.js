@@ -25,44 +25,50 @@ function onMapClick(e) {
     .openOn(map);
 }
 
-// Adiciona um ouvinte de evento ao mapa que executa a função 'onMapClick' ao clicar no mapa
+// Adiciona um evento ao mapa que executa a função 'onMapClick' ao clicar no mapa
 map.on('click', onMapClick);
 
 
 
+// Define os "niveis" de clientes ana semana de dia
 var trace1 = {
-  x: ['seg', 'ter', 'qua', 'qui', 'sex', 'sab', 'dom'],
-  y: [20, 14, 25, 16, 18, 22, 19, 15, 12, 16, 14, 17],
-  type: 'bar',
-  name: 'dia',
-  marker: {
-    color: 'rgb(49,130,189)',
-    opacity: 0.7,
+  x: ['seg', 'ter', 'qua', 'qui', 'sex', 'sab', 'dom'], // Eixo x: seria mostrando os dias da semana
+  y: [20, 14, 25, 16, 18, 22, 19, 15, 12, 16, 14, 17], // Eixo y: representa a demanda de clientes durante o dia
+  type: 'bar', // define o tipo de gráfico (barras (bar))
+  name: 'dia', // Nome da legenda associado a esta parte do gráfico
+  marker: { // aparencia das barras
+    color: 'rgb(49,130,189)', // Cor das barras (azul)
+    opacity: 0.7, // Opacidade das barras (70% visível)
   }
 };
 
+// Define os "niveis" de clientes ana semana de noite
 var trace2 = {
-  x: ['seg', 'ter', 'qua', 'qui', 'sex', 'sab', 'dom'],
-  y: [19, 14, 22, 14, 16, 19, 15, 14, 10, 12, 12, 16],
-  type: 'bar',
-  name: 'noite',
-  marker: {
-    color: 'rgb(204,204,204)',
-    opacity: 0.5
+  x: ['seg', 'ter', 'qua', 'qui', 'sex', 'sab', 'dom'], // Eixo x: dias da semana (mesmo que o trace1)
+  y: [19, 14, 22, 14, 16, 19, 15, 14, 10, 12, 12, 16], // Eixo y: representa a demanda de clientees durante a noite
+  type: 'bar', // define o tipo de gráfico (barras (bar))
+  name: 'noite', // Nome da legenda associado a esta parte do gráfico
+  marker: { // aparencia das barras
+    color: 'rgb(204,204,204)', // Cor das barras (cinza claro)
+    opacity: 0.5 // Opacidade das barras (50% visível)
   }
 };
 
+// deixa os 2 tipos de barras junto para formar o gráfico
 var data = [trace1, trace2];
 
+// Configura a aparencia do gráfico
 var layout = {
-  title: {
-    text: 'Demanda de Clientes'
+  title: { // título do gráfico
+    text: 'Demanda de Clientes' //  título
   },
-  xaxis: {
-    tickangle: -45
+  xaxis: { // eixo x
+    tickangle: -45 // Inclina os rótulos do eixo x em -45 graus para ficar mais bunitin
   },
-  barmode: 'group'
+  barmode: 'group' // Define que as barras serão agrupadas uma do lado da outra
 };
 
+// mostra o gráfico no HTML com id 'myDiv' usando a biblioteca Plotly como fonte 
 Plotly.newPlot('myDiv', data, layout);
 
+//cabô😈
