@@ -1,0 +1,145 @@
+
+#map {
+     height: 137vh; 
+     width: 150vh;
+    
+}
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #e2e2e2;
+    color: #303030;
+    cursor: url('imgs/undefined\ -\ Imgur.png'), auto;
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+a {
+    color: #ffbd59;
+    text-decoration: none;
+    transition: 0.3s;
+
+}
+a:hover {
+    opacity: 0.7;
+}
+#btn1 {
+    font-family: pokemon;
+    color: #ffbd59;
+    background-color: #23232e;
+    border-radius: 40%;
+    position: fixed;
+    width: 6%;
+    position: absolute;
+    bottom: 92vh;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    font-size: 5vh;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    left: 93%;
+    z-index: 9999999;
+}
+
+#btn1:hover {
+    background-color: #38384d;
+}
+
+.copacabana1 {
+    font-family: pokemon;
+    font-size: 6vh;
+    padding-left: 24%;
+
+}
+
+.copacabana2 {
+    font-family: pokemon;
+    font-size: 6vh;
+}
+
+.copacabana3 {
+    font-family: pokemon;
+    font-size: 6vh;
+}
+
+.copacabana4 {
+    font-family: pokemon;
+    font-size: 6vh;
+}
+
+.botãobar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
+    background: #575770;
+    height: 8vh;
+    text-align: center;
+    z-index: 99999;
+    
+}
+
+.navbar {
+
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
+    background: #23232e;
+    height: 7vh;
+    text-align: center;
+    padding-bottom: 0vh;
+}
+.logo1 {
+    position: absolute;
+    width: 23%;
+    z-index: 999;
+    right: 75%;
+    padding-top: 40px;
+    border-radius: 10%;
+    height: 30vh;
+}
+.bar{
+    font-size:5vh ;
+}
+#pizzaria-img{
+        transition: 0.3s;
+    top: 15vh;
+    width: 45vh;
+    padding-left: 150vh;
+    position: absolute;
+}
+#pizzaria-img:hover{
+    opacity: 0.7 ;
+}
+#titulo{
+    top: 53vh;
+    font-size: 5vh;
+    padding-left: 154vh;
+    position: absolute;
+    z-index: 999999;
+}
+#nota{
+    top: 60vh;
+    font-size: 3vh;
+    padding-left: 154vh;
+    position: absolute;
+    z-index: 999999; 
+}
+#caracteristicas{
+    top: 70vh;
+    font-size: 3vh;
+    padding-left: 154vh;
+    position: absolute;
+    z-index: 999999; 
+}
+#myDiv{
+    position: absolute;
+    margin-left: 150vh;
+    width: 45vh;
+    top: 105vh;
+}

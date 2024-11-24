@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <title>Papa's pizzaria|Localidades</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="csslocalidades.css">
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+    crossorigin=""/>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+     crossorigin=""></script>
+
+	<script src='https://cdn.plot.ly/plotly-2.35.2.min.js'></script>
+  </head>
+
+  <body>
+    <section>
+            <!--cabeçalho novo-->
+    <header>
+        <nav class="botãobar">
+
+            <img class="logo1" src="imgs/_____-removebg-preview.png" alt="">
+
+            <div id="button1">
+                <div>
+                    <button onclick="openalert()" id="btn1">conta</button>
+                </div>
+            </div>
+
+        </nav>
+
+        <nav class="navbar">
+            <a class="copacabana1" href="#">Home</a>
+            <a class="bar">|</a>
+            <a class="copacabana2" href="#">Sobre</a>
+            <a class="bar">|</a>
+            <a class="copacabana3" href="#">Cardápio</a>
+            <a class="bar">|</a>
+            <a class="copacabana4" href="#">Lojas</a>
+        </nav>
+    </header>
+    <p id="titulo">Papa's Pizzaria</p>
+    <p id="nota">4,1  ★ ★ ★ ★ ☆ R$ 30,00 - 60,00</p>
+    <p id="caracteristicas">Pizzaria é aconchegante, familiar e feita<br> especialmente para os que querem<br> um ambiente calmo e confortavel<br> para ficar com a familia</p>
+    <img id="pizzaria-img" src="imgs/Leonardo_Phoenix_A_modern_trendy_Papas_Pizzeria_with_a_warm_an_3.jpg" alt="">
+    <div id='myDiv'><!-- Plotly chart will be drawn inside this DIV --></div>
+    <div id="map"></div>
+</section>
+  </body>
+
+  <script src="jslocalidades.js" defer></script>
+</html>
