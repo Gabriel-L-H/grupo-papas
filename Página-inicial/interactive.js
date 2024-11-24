@@ -161,11 +161,21 @@ if (window.Worker) {
 } else {
   alert("Web Workers não são suportados neste navegador.");//caso web workers n funcionem
 }
+// Declara um array com os nomes das pizzas mais pedidas
 const pizzas = ["Mussarela", "Calabresa", "Portuguesa", "Marguerita", "Frango com catupiry"];
+
+// Declara um array com as porcentagens de pedidos para cada pizza correspondente no array 'pizzas'
 const porcentagem = [40, 20, 15, 10 , 5];
 
+// Declara um objeto que contém o título para o gráfico
 const titulo = {title:"As mais pedidas"};
 
+// Declara um array 'data' com as informações necessárias para criar o gráfico
+// 'labels' define as categorias (neste caso, os nomes das pizzas)
+// 'values' define os valores (as porcentagens de pedidos)
+// 'type' especifica o tipo de gráfico, que neste caso é um gráfico de pizza ('pie')
 const data = [{labels:pizzas, values:porcentagem, type:"pie"}];
 
+// Usa a biblioteca Plotly para criar o gráfico, passando o ID do elemento HTML (myPlot),
+// os dados do gráfico (data) e o título (titulo)
 Plotly.newPlot("myPlot", data, titulo);
